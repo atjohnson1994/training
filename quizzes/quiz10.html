@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Quiz 10: Formulating</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>Quiz 10: Formulating</h1>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="../formulation.html">Home</a></li>
+            <li><a href="../modules/modules.html">Modules</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+            <li><a href="#">Scores</a></li>
+        </ul>
+    </nav>
+
+
+
+    <h1>Formulating</h1>
+    
+    <div class="container_question">
+        <div class="question">
+            <h2>1. What volume is this micropipette set to?</h2>
+            <img src="../images/pipette_practice_p20.jpg">
+            <br>
+            <input type="radio" name="q1" value="a"> A. 2 uL, 16 uL<br>
+            <input type="radio" name="q1" value="b"> B. 20 uL, 160 uL<br>
+            <input type="radio" name="q1" value="c"> C. 0.2 uL, 1.6 uL<br>
+            <input type="radio" name="q1" value="d"> D. 200 uL, 1600 uL<br>
+        </div>
+
+        <div class="question">
+            <h2>2. What volume is this micropipette set to?</h2>
+            <img src="../images/pipette_practice_p200.jpg">
+            <br>
+            <input type="radio" name="q2" value="a"> A. 375 uL, 1730 uL<br>
+            <input type="radio" name="q2" value="b"> B. 3.75 uL, 17.3 uL<br>
+            <input type="radio" name="q2" value="c"> C. 37.5 uL, 173 uL<br>
+            <input type="radio" name="q2" value="d"> D. 375 uL, 173 uL<br>
+        </div>
+
+        <div class="question">
+            <h2>3. What volume is this micropipette set to?</h2>
+            <img src="../images/pipette_practice_p1000.jpg">
+            <br>
+            <input type="radio" name="q3" value="a"> A. 46.5 uL, 1 mL<br>
+            <input type="radio" name="q3" value="b"> B. 4.65 uL, 10 uL<br>
+            <input type="radio" name="q3" value="c"> C. 46.5 uL, 100 uL<br>
+            <input type="radio" name="q3" value="d"> D. 465 uL, 1000 uL<br>
+        </div>
+
+        
+
+        <!-- Add more questions as needed -->
+
+        <button onclick="submitTest()">Submit</button>
+    </div>
+
+    <script>
+        function submitTest() {
+            let score = 0;
+            const correctAnswers = {
+                q1: 'a', // Correct answer for question 1
+                q2: 'c',  // Correct answer for question 2
+                q3: 'd'  // Correct answer for question 2
+                // Add more correct answers as needed
+            };
+
+            // Loop through each question
+            for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
+                const questionName = 'q' + i;
+                const selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswers[questionName]) {
+                        score++;
+                    }
+                }
+            }
+
+            // Display feedback to the user
+            let feedback = "You scored " + score + " out of " + Object.keys(correctAnswers).length + ".";
+            if (score === Object.keys(correctAnswers).length) {
+                feedback += " Congratulations!";
+            } else {
+                feedback += " Keep practicing!";
+            }
+            alert(feedback);
+        }
+    </script>
+</body>
+</html>

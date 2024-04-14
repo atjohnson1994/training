@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script type="text/javascript" src="../static/java.js"></script>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+    </head>
+    <body>
+        <div id="home"> <!-- Add padding to the content -->
+            <div>
+              <div class="row">
+                <div >
+                  <!-- Title and description -->
+                  <div id="title">
+                    <h1 >Module 10: Formulating</h1>
+                  </div>
+                  <nav>
+                    <ul>
+                        <li><a href="../formulation.html">Home</a></li>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="../quizzes/quizzes.html">Quizzes</a></li>
+                        <li><a href="#">Scores</a></li>
+                    </ul>
+                </nav>
+                <div class="container">
+                <a href="#">
+                <div class="card">
+                  <h2>Part 1: Micropipettes</h2>
+                </div>
+                </a>
+                <a href="#">
+                <div class="card">
+                  <h2>Part 2: Formulating Procedure</h2>
+                </div>
+                </a>
+                <a href="#">
+                  <div class="card">
+                    <h2>Relevent WIDs</h2>
+                  </div>
+                  </a>
+                  <a href="#">
+                <div class="card">
+                  <h2>Relevent Batch Records</h2>
+                </div>
+                </a>
+                </div>
+                  <video controls>
+                    <source src="../images/biot11_vid_usingmicro_mezz-16x9-mp4-1200k_GI9Li5m.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                  </video>
+                  <div class="container_content">
+                    <h2>Part 1: Micropipettes</h2>
+                    <h3>Parts of the Micropipette:</h3>
+                    <img src="../images/pipette_components.png">
+                    <h2>Plunger Button</h2>
+
+                    <p>Located at the top of the micropipette,
+                       the plunger button is used to aspirate and dispense liquids. 
+                       Pressing the plunger button to the first stop draws liquid into the tip, 
+                       while pressing it to the second stop dispenses the liquid.
+                       Rotating the plunger clockwise increases the volume, 
+                       while rotating it counterclockwise decreases the volume.</p>
+                       <img src="../images/plunger_volume_lock.jpg">
+                       <h2>Ejector Mechanism</h2>
+                       <p>Positioned near the top of the micropipette, 
+                        the ejector button is used to release the pipette tip after use. 
+                        Pressing the ejector button pushes the tip off the micropipette, 
+                        allowing for easy disposal.</p>
+                        <h2>Display Window</h2>
+
+                        <p>Some micropipette models feature a display window on the volume adjustment dial. 
+                        This window shows the selected volume, 
+                        allowing users to confirm the volume setting at a glance.</p>
+                        <img src="../images/volume_display.png">
+                        <h2>Shaft</h2>
+
+                        <p>The shaft is the main body of the micropipette. 
+                          It houses the internal mechanisms responsible for aspirating and dispensing liquids.</p>
+                        <h2>Tip Cone</h2>
+
+                        <p>The tip cone is the tapered end of the micropipette shaft where the pipette tip is attached. 
+                          It ensures a secure and leak-proof connection between the micropipette and the tip.</p>
+                  </div>
+                    <br>
+                    <div class="container_question">
+                    <div class="question">
+                      <h1>Question 1:</h1>
+                      <p>What does turning the plunger button do?</p>
+                      <div class="options">
+                        <label><input type="radio" name="q1" onclick=que_sel1(0)> Aspirates</label>
+                        <label><input type="radio" name="q1" onclick=que_sel1(1)> Dispenses</label>
+                        <label><input type="radio" name="q1" onclick=que_sel1(2)> Adjusts Volume</label>
+                        <label><input type="radio" name="q1" onclick=que_sel1(3)> Ejects Tip</label>
+                        <br>
+                        <br>
+                        <button type="button" onclick="check_que1()">Check Answer</button>
+                        <div id="que1_box">
+                          <p id="que1_a" color="white"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="container_content">
+                    <h2>Micropipette Use</h2>
+                    <h3>Select the Correct Tip:</h3>
+                    <p>Choose a pipette tip appropriate for the volume you are measuring. 
+                      Make sure the tip size matches the micropipette's volume range. 
+                      Ensure the tip is clean and free from any contamination.</p>
+                    <h3>Set the Volume:</h3>
+                    <p>Adjust the volume by turning the plunger button to the desired amount. Be careful to set it precisely; 
+                      turning the dial clockwise increases the volume, while turning it counterclockwise decreases it. 
+                      Confirm the volume displayed on the micropipette matches the volume you intend to pipette.</p>
+                    <h3>Attach the Tip:</h3>
+                    <p>Attach the selected pipette tip firmly onto the micropipette. 
+                      Push it onto the tip holder until you feel a slight click, 
+                      indicating it's securely attached. 
+                      Avoid touching the tip's inner surface to prevent contamination.</p>
+                    <h3>Aspirate the Liquid:</h3>
+                    <p>Depress the plunger button to the first stop to draw the liquid into the tip. 
+                      Immerse the tip into the liquid sample, 
+                      ensuring it reaches below the surface without touching the vessel's bottom.</p>
+                    <h3>Dispense the Liquid:</h3>
+                    <p>Position the tip over the desired destination, 
+                      and slowly depress the plunger to the second stop to dispense the liquid. 
+                      Wait a moment to ensure all liquid is expelled from the tip, 
+                      then carefully remove the tip from the container to avoid splashing or dripping.</p>
+                    <h3>Eject the Tip:</h3>
+                    <p>After dispensing the liquid, 
+                      eject the used tip by pressing the ejector button. 
+                      Ensure it is safely disposed of in a designated waste container.</p>
+                      <img src="../images/use.png">
+                  </div>
+                  <br>
+                  <div class="container_question">
+                  <div class="question">
+                    <h1>Question 2:</h1>
+                    <p>In forward pipetting, what is a micropipette's second stop used for?</p>
+                    <div class="options">
+                      <label><input type="radio" name="q1" onclick=que_sel2(0)> Aspiration</label>
+                      <label><input type="radio" name="q1" onclick=que_sel2(1)> Dispensing</label>
+                      <label><input type="radio" name="q1" onclick=que_sel2(2)> Ejection</label>
+                      <label><input type="radio" name="q1" onclick=que_sel2(3)> Volume Adjustment</label>
+                      <br>
+                      <br>
+                      <button type="button" onclick="check_que2()">Check Answer</button>
+                      <div id="que2_box">
+                        <p id="que2_a" color="white"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                  <div class="container_content">
+                    <h2>Setting the Volume</h2>
+                    <h3>Read the Volume Range:</h3>
+                    <p>Before setting the volume, 
+                      familiarize yourself with the micropipette's volume range. 
+                      Micropipettes come in various sizes, 
+                      each with a specific volume range. 
+                      Ensure that the volume you intend to pipette falls within the micropipette's capacity.</p>
+                    <h3>Unlock the Volume Lock Lever:</h3>
+                    <p>The micropipette has a volume lock mechanism, ensure it is unlocked before adjusting the volume. 
+                      The shaft lock prevents accidental changes to the volume setting during pipetting. 
+                      Typically, you can unlock the dial by twisting it counterclockwise until it clicks into place.</p>
+                    <h3>Rotate the Plunger Button to Adjust Volume:</h3>
+                    <p>Grip the pipette firmly and rotate it to the desired volume setting.</p>
+                    <h3>Verify the Volume Setting:</h3>
+                    <p>Once you've set the volume, 
+                      double-check the volume indicator on the volume adjustment dial to confirm that it matches the intended volume. 
+                      Ensure there are no discrepancies between the selected volume and the volume displayed on the micropipette.</p>
+                    <h3>Lock the Volume Setting:</h3>
+                    <p>If your micropipette has a volume lock mechanism, you can lock the volume setting to prevent accidental changes during pipetting. 
+                      To lock the volume setting, twist the lock lever into place. 
+                      This secures the selected volume and prevents unintentional adjustments.</p>
+                      <img src="../images/shaft_lock.gif">
+                  
+                  
+                    <img src="../images/plunger_button.jpg" width="150">
+                    <img src="../images/pipette_volume.jpg">
+                    <img src="../images/volumes.png">
+                  
+                </div>
+                  <br>
+                  <div class="container_question">
+                    <h2>Practice Problem 1:</h2>
+                      <p>You need to aspirate 540 uL of liquid. Select a pipette from the drop down menu, then set the pipette to the correct volume.</p>
+                      <select id="practice_pipette_select" onchange="q0_ps(this.value)">
+                        <option value='0'>Select a pipette</option>
+                        <option value="p1000">p1000</option>
+                        <option value="p200">p200</option>
+                        <option value="p20">p20</option>
+                      </select>
+                      <br>
+                      <br>
+                      <select id="practice_q0_i0" onchange="dial0(this.value)">
+                        <option value="*">*</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                        <br>
+                        <br>
+                      <select id="practice_q0_i1" onchange="dial1(this.value)">
+                        <option value="*">*</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                        <br>
+                        <br>
+                      <select id="practice_q0_i2" onchange="dial2(this.value)">
+                        <option value="*">*</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                      <br>
+                      <br>
+                      <button type="button" onclick="check_answer0()">Check Answer</button>
+                      <div id="q0_box">
+                        <p id="q0_a" color="white"></p>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="container_question">
+                    <h2>Practice Problem 2:</h2>
+                    <p>You need to aspirate 154 uL of liquid. Select a pipette from the drop down menu, then set the pipette to the correct volume.</p>
+                    <select id="practice_pipette_select" onchange="q1_ps(this.value)">
+                      <option value='0'>Select a pipette</option>
+                      <option value="p1000">p1000</option>
+                      <option value="p200">p200</option>
+                      <option value="p20">p20</option>
+                    </select>
+                    <br>
+                    <br>
+                    <select id="practice_q0_i0" onchange="dial3(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i1" onchange="dial4(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i2" onchange="dial5(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="button" onclick="check_answer1()">Check Answer</button>
+                    <div id="q1_box">
+                      <p id="q1_a" color="white"></p>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="container_question">
+                    <h2>Practice Problem 3:</h2>
+                    <p>You need to aspirate 18 uL of liquid. Select a pipette from the drop down menu, then set the pipette to the correct volume.</p>
+                    <select id="practice_pipette_select" onchange="q2_ps(this.value)">
+                      <option value='0'>Select a pipette</option>
+                      <option value="p1000">p1000</option>
+                      <option value="p200">p200</option>
+                      <option value="p20">p20</option>
+                    </select>
+                    <br>
+                    <br>
+                    <select id="practice_q0_i0" onchange="dial6(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i1" onchange="dial7(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i2" onchange="dial8(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="button" onclick="check_answer2()">Check Answer</button>
+                    <div id="q2_box">
+                      <p id="q2_a" color="white"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </body>
+</html>
