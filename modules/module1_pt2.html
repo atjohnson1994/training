@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script type="text/javascript" src="../static/java.js"></script>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+    </head>
+    <body>
+        <div id="home"> <!-- Add padding to the content -->
+            <div>
+              <div class="row">
+                <div >
+                  <!-- Title and description -->
+                  <div id="title">
+                    <h1 >Module 1: Trees & Freeze Dryers</h1>
+                  </div>
+                  <nav>
+                    <ul>
+                        <li><a href="../formulation.html">Home</a></li>
+                        <li><a href="modules.html">Modules</a></li>
+                        <li><a href="../quizzes/quizzes.html">Quizzes</a></li>
+                        <li><a href="#">Scores</a></li>
+                    </ul>
+                </nav>
+                <div class="container">
+                <a href="module1">
+                <div class="card">
+                  <h2>Part 1: Plunger Trees</h2>
+                </div>
+                </a>
+                <a href="module1_pt2">
+                <div class="card">
+                  <h2>Part 2: Freeze Dryers</h2>
+                </div>
+                </a>
+                <a href="#">
+                  <div class="card">
+                    <h2>Relevent WIDs</h2>
+                  </div>
+                  </a>
+                  <a href="#">
+                <div class="card">
+                  <h2>Relevent Batch Records</h2>
+                </div>
+                </a>
+                </div>
+                  <video controls>
+                    <source src="#">
+                    Your browser does not support HTML video.
+                  </video>
+                  <div class="container_content">
+                    <h2>Part 2: Freeze Dryers</h2>
+                    <h3>Freezing Drying Steps:</h3>
+                    <img src="../images/#">
+                    <h2>Freezing</h2>
+
+                    <p>This phase is crucial in the freeze-drying process. 
+                      The freeze dryer lowers the material's temperature 
+                      below its triple point to ensure sublimation rather than melting, 
+                      thereby preserving its physical structure.</p>
+                        <h2>Primary Dry (sublimation)</h2>
+
+                        <p>The next stage is primary drying, 
+                          also known as sublimation, 
+                          during which the pressure decreases, 
+                          and heat is applied to the substance to facilitate the sublimation of water. 
+                          The vacuum in the freeze dryer accelerates this sublimation process. 
+                          Furthermore, the freeze dryer's chilly condenser offers a platform for water vapor to attach and solidify, 
+                          safeguarding the vacuum pump from water vapor. 
+                          Roughly 95% of the moisture within the substance is eliminated during this phase. 
+                          Primary drying might progress slowly, 
+                          and excessive heat can cause changes to the material's composition.</p>
+                        <img src="#">
+                        <h2>Secondary Dry (adsorption)</h2>
+
+                        <p>In the ultimate stage, known as secondary drying or adsorption, 
+                          the focus is on eliminating ionically-bound water molecules. 
+                          By elevating the temperature beyond that of the primary drying phase, 
+                          the bonds between the material and water molecules are disrupted. 
+                          This ensures the retention of a porous structure in the freeze-dried materials. 
+                          Once the freeze dryer finishes its operation, 
+                          the vacuum can be relieved using an inert gas before sealing the material. 
+                          Typically, most substances can be dried to achieve a residual moisture content of 1-5%.</p>
+                  </div>
+                    <br>
+                    <div class="container_question">
+                    <div class="question">
+                      <h1>Question 1:</h1>
+                      <p>Q</p>
+                      <div class="options">
+                        <label><input type="radio" name="q1" onclick=que_sel1(0)> q1</label>
+                        <label><input type="radio" name="q1" onclick=que_sel1(1)> q2</label>
+                        <label><input type="radio" name="q1" onclick=que_sel1(2)> q3</label>
+                        <label><input type="radio" name="q1" onclick=que_sel1(3)> q4</label>
+                        <br>
+                        <br>
+                        <button type="button" onclick="check_que1()">Check Answer</button>
+                        <div id="que1_box">
+                          <p id="que1_a" color="white"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <div class="container_content">
+                    <h2>Phase Changing</h2>
+                    <h3>Factors</h3>
+                    <p>Two primary factors, namely heat and atmospheric pressure, 
+                      dictate the phase (solid, liquid, or gas) that a substance will assume. 
+                      To manifest a specific phase, 
+                      both temperature and pressure must fall within certain thresholds. 
+                      In the absence of these conditions, 
+                      the substance cannot adopt that particular phase. 
+                      The accompanying chart illustrates the requisite pressure and temperature parameters for different phases of water. 
+                      As depicted in the chart, 
+                      water can exist in a liquid state at sea level 
+                      (where pressure equals 1 atm) if the temperature falls between the 
+                      freezing point at sea level (32 degrees Fahrenheit or 0 degrees Celsius) 
+                      and the boiling point at sea level (212 F or 100 C). 
+                      However, if the temperature rises above 32 F while maintaining 
+                      atmospheric pressure below 0.06 atmospheres (ATM), 
+                      the water reaches a sufficiently warm state for thawing, 
+                      yet lacks the requisite pressure for liquid formation, 
+                      thus transitioning into a gas.</p>
+                    <h3>Sublimation</h3>
+                    <p>Freeze-drying hinges on the fundamental concept of sublimation, 
+                      the direct transition of a solid substance into a gas phase. 
+                      Similar to evaporation, 
+                      sublimation takes place when a molecule acquires adequate energy to break away from its neighboring molecules. 
+                      Water undergoes sublimation from its solid state (ice) to its gaseous state (vapor) when its molecules attain the necessary energy to break free, 
+                      yet the conditions are unsuitable for the formation of a liquid phase.</p>
+                    
+                    <h3>Freeze Dryer Operation</h3>
+                    <p>This is precisely the function of a freeze-drying apparatus. 
+                      A standard machine comprises a freeze-drying chamber 
+                      equipped with multiple shelves linked to heating elements, 
+                      a freezing coil connected to a refrigerator compressor, and a vacuum pump. 
+                      In most machines, 
+                      the material slated for preservation is positioned on the shelves while still unfrozen. 
+                      Upon sealing the chamber and initiating the procedure, 
+                      the compressors activate to reduce the chamber's temperature. 
+                      The material solidifies as it freezes, 
+                      thereby isolating the water from its surroundings at a molecular level, 
+                      despite the water's continued presence. 
+                      Subsequently, the machine activates the vacuum pump to expel air from the chamber, 
+                      reducing the atmospheric pressure to below 0.06 ATM. 
+                      Meanwhile, the heating units gently apply heat to the shelves, 
+                      prompting the ice to undergo a phase change. Given the low pressure, 
+                      the ice transitions directly into water vapor. 
+                      This vapor exits the freeze-drying chamber, 
+                      passing over the freezing coil where it condenses into solid ice, 
+                      akin to water forming frost on a chilly day. 
+                      This cycle persists for numerous hours, 
+                      sometimes even days, allowing the material to gradually desiccate. 
+                      The protracted duration of the process is essential as excessive heating can alter the material's composition and structure significantly. 
+                      Moreover, hastening the sublimation process may generate more water vapor within a given timeframe than the pumping system can effectively remove from the chamber, 
+                      potentially reintroducing moisture to the material and compromising its quality. 
+                      Upon achieving sufficient dryness, 
+                      the material is sealed within a moisture-free package, often supplemented with an oxygen-absorbing substance. 
+                      If securely sealed, the material can remain shelf-stable for an extended period, 
+                      retaining its integrity until rehydrated with a small amount of water 
+                      (though minute moisture traces may remain, leading to eventual spoilage). 
+                      Under ideal circumstances, the material undergoes the entire process with minimal alteration.</p>
+                  </div>
+                  <br>
+                  <div class="container_question">
+                  <div class="question">
+                    <h1>Question 2:</h1>
+                    <p>q2</p>
+                    <div class="options">
+                      <label><input type="radio" name="q2" onclick=que_sel2(0)> q2</label>
+                      <label><input type="radio" name="q2" onclick=que_sel2(1)> q2</label>
+                      <label><input type="radio" name="q2" onclick=que_sel2(2)> q2</label>
+                      <label><input type="radio" name="q2" onclick=que_sel2(3)> q2</label>
+                      <br>
+                      <br>
+                      <button type="button" onclick="check_que2()">Check Answer</button>
+                      <div id="que2_box">
+                        <p id="que2_a" color="white"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                  <div class="container_content">
+                    <h2>Header</h2>
+                    <h3>Header</h3>
+                    <p>Paragraph</p>
+                    <h3>Header</h3>
+                    <p>Paragraph</p>
+                    <h3>Header</h3>
+                    <p>Paragraph</p>
+                    <h3>Header</h3>
+                    <p>Paragraph</p>
+                    <h3>Header</h3>
+                    <p>Paragraph</p>
+                      <img src="../images/#">
+                  
+                  
+                    <img src="../images/#" width="150">
+                    <img src="../images/#.jpg">
+                    <img src="../images/#.png">
+                  
+                </div>
+                  <br>
+                  <div class="container_question">
+                    <h2>Practice Problem 1:</h2>
+                      <p>q3</p>
+                      <select id="practice_pipette_select" onchange="q0_ps(this.value)">
+                        <option value='0'>Select a pipette</option>
+                        <option value="p1000">p1000</option>
+                        <option value="p200">p200</option>
+                        <option value="p20">p20</option>
+                      </select>
+                      <br>
+                      <br>
+                      <select id="practice_q0_i0" onchange="dial0(this.value)">
+                        <option value="*">*</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                        <br>
+                        <br>
+                      <select id="practice_q0_i1" onchange="dial1(this.value)">
+                        <option value="*">*</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                        <br>
+                        <br>
+                      <select id="practice_q0_i2" onchange="dial2(this.value)">
+                        <option value="*">*</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
+                      <br>
+                      <br>
+                      <button type="button" onclick="check_answer0()">Check Answer</button>
+                      <div id="q0_box">
+                        <p id="q0_a" color="white"></p>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="container_question">
+                    <h2>Practice Problem 2:</h2>
+                    <p>q4</p>
+                    <select id="practice_pipette_select" onchange="q1_ps(this.value)">
+                      <option value='0'>Select a pipette</option>
+                      <option value="p1000">p1000</option>
+                      <option value="p200">p200</option>
+                      <option value="p20">p20</option>
+                    </select>
+                    <br>
+                    <br>
+                    <select id="practice_q0_i0" onchange="dial3(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i1" onchange="dial4(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i2" onchange="dial5(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="button" onclick="check_answer1()">Check Answer</button>
+                    <div id="q1_box">
+                      <p id="q1_a" color="white"></p>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="container_question">
+                    <h2>Practice Problem 3:</h2>
+                    <p>q5</p>
+                    <select id="practice_pipette_select" onchange="q2_ps(this.value)">
+                      <option value='0'>Select a pipette</option>
+                      <option value="p1000">p1000</option>
+                      <option value="p200">p200</option>
+                      <option value="p20">p20</option>
+                    </select>
+                    <br>
+                    <br>
+                    <select id="practice_q0_i0" onchange="dial6(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i1" onchange="dial7(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                      <br>
+                      <br>
+                    <select id="practice_q0_i2" onchange="dial8(this.value)">
+                      <option value="*">*</option>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="button" onclick="check_answer2()">Check Answer</button>
+                    <div id="q2_box">
+                      <p id="q2_a" color="white"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </body>
+</html>
