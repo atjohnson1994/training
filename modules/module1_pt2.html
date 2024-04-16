@@ -192,12 +192,12 @@
                 <br>
                   <div class="container_content">
                     <h2>Freeze Dryer Operation</h2>
-                    <h3>Optidry</h3>
-                    <p>During each stage of the freeze drying protocol, 
-                    there are several steps that the freeze dryer will conduct. Each step has a time and temperature associated with that step. 
-                    The final freeze & drying steps additionaly have a pressure associated with them. For the protocol to progress through a step, 
+                    <h3>Freezing Phase</h3>
+                    <p>During each phase of the freeze drying protocol, 
+                    there are several steps that the freeze dryer will complete. Each step has values for time, temperature, and some steps have pressure. 
+                    For the protocol to progress through a step, 
                     the internal temperature and pressure must reach the listed values in the protocol. Additionally, if there is a time value, 
-                    the protocol must remain in that step for the listed time. </p>
+                    the protocol must remain in that step for the listed time.</p>
                     <div class="slideshow-container">
                       <div class="mySlides">
                         <img src="../images/protocol_14_freeze_arrow.png" style="width:70%">
@@ -238,15 +238,8 @@
                       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                       <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
-                    <h3>Freeze Dryer Protocols</h3>
-                    <h4>ASAY-SFW-0014</h4>
-                    <p>This protocol is used in the freeze drying process of our film array pouches. 
-                    In step 1 of protocol ASAY-SUB-0014, the temperature is set to -60 C while the time is set to 0. This means that 
-                    to progress to the next step, the internal temperature of the freeze dryer must reach -60 C. Due to the time being set to 0, 
-                    there is no required amount of time that the freeze dryer must be in that step. However, in step 2, the temperature setting 
-                    remains at -60 C, while the time is set to 240 minutes. This implies that the freeze dryer will remain 
-                    at -60 C for 240 minutes before continuing to the next step. The freezing stage of the protocol ends with final freeze, 
-                    which holds the temperature at -55 C for 5 minutes at a pressure of 500 MT.</p>
+                    <h3>Primary & Secondary Dry</h3>
+                    <p>Up next in this protocol is the drying phase. The freeze dryer reduces pressure to 0 MT, while slightly warming up the temperature to -40 C. The protocol progresses through the drying steps before finishing the protocol in secondary dry.</p>
                       <div class="slideshow-container">
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_arrow.png" style="width:70%">
@@ -306,15 +299,30 @@
                       <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
                       <a class="next" onclick="plusSlides2(1)">&#10095;</a>
                     </div>
-                    <p>Up next in this protocol is the drying stage. Where the freeze dryer reduces pressure to 0 MT, while slightly warming 
-                    up the temperature to -40 C. The protocol progresses through the drying steps before finishing the protocol in secondary dry.</p>
-                      <img src='../images/dry_14.PNG' width=450>
-                    <h4>ASAY-SFW-0020</h4>
-                    <p>This protocol is used in the freeze drying process of our magbead pellets.</p>
-                      <img src='../images/freeze_20.PNG' width=450>
-                      <img src='../images/dry_20.PNG' width=450>
                     <h3>Header</h3>
                     <p>Paragraph</p>
+                      <div class="slideshow-container">
+                      <div class="mySlides3">
+                        <img src="../images/protocol_14_fd_arrow.png" style="width:70%">
+                        <div class="text">Freeze Drying Tab</div>
+                        <div class="text">First, select the freeze drying tab</div>
+                      </div>
+                      <div class="mySlides3">
+                        <img src="../images/protocol_14_existing_arrow.png" style="width:70%">
+                        <div class="text">Existing Recipes</div>
+                        <div class="text">Select the existing tab</div>
+                      </div>
+                        <div class="mySlides3">
+                        <img src="../images/protocol_14_download_arrow.png" style="width:70%">
+                        <div class="text">Download Recipe</div>
+                        <div class="text">Select ASAY-SFW-0014, then select open</div>
+                      </div>
+                        <div class="mySlides3">
+                        <img src="../images/protocol_14_start_arrow.png" style="width:70%">
+                        <div class="text">Start Freeze Dryer</div>
+                        <div class="text">Select the start button</div>
+                      </div>
+                      </div>
                     <h3>Header</h3>
                     <p>Paragraph</p>
                       <img src="../images/#">
@@ -570,5 +578,34 @@
   // Automatically show the first slide when the page loads
   window.onload = function() {
     showSlides2(slideIndex2);
+  };
+
+    
+    // slide show 3
+  var slideIndex3 = 1;
+  showSlides3(slideIndex3);
+  
+  function plusSlides3(n) {
+    showSlides3(slideIndex3 += n);
+  }
+  
+  function currentSlide3(n) {
+    showSlides3(slideIndex3 = n);
+  }
+  
+  function showSlides3(n) {
+    var i;
+    var slides3 = document.getElementsByClassName("mySlides3");
+    if (n > slides3.length) {slideIndex3 = 1}
+    if (n < 1) {slideIndex3 = slides3.length}
+    for (i = 0; i < slides3.length; i++) {
+        slides3[i].style.display = "none";
+    }
+    slides3[slideIndex3-1].style.display = "block";
+  }
+  
+  // Automatically show the first slide when the page loads
+  window.onload = function() {
+    showSlides3(slideIndex3);
   };
   </script>
