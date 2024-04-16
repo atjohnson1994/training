@@ -199,37 +199,37 @@
                     the internal temperature and pressure must reach the listed values in the protocol. Additionally, if there is a time value, 
                     the protocol must remain in that step for the listed time. </p>
                     <div class="slideshow-container">
-                      <div class="mySlides">
+                      <div class="freeze_slides">
                         <img src="../images/protocol_14_freeze_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase</div>
                         <div class="text">The initial freezing phase contains 2 steps followed by final freeze</div>
                       </div>
                     
-                      <div class="mySlides">
+                      <div class="freeze_slides">
                         <img src="../images/protocol_14_metrics_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase Metrics</div>
                         <div class="text">SHELF SETPT/Temperature (C) & TIME (minutes)</div>
                       </div>
                     
-                      <div class="mySlides">
+                      <div class="freeze_slides">
                         <img src="../images/protocol_14_step_1_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase Step 1</div>
                         <div class="text">Temperature is -60 C and Time is set to 0</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="freeze_slides">
                         <img src="../images/protocol_14_step_2_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase Step 2</div>
                         <div class="text">Temperature remains at -60 C, but Time is set to 240 minutes</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="freeze_slides">
                         <img src="../images/protocol_14_null_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase Null Fields</div>
                         <div class="text">Steps that only contain 0 are skipped</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="freeze_slides">
                         <img src="../images/protocol_14_final_arrow.png" style="width:70%">
                         <div class="text">Final Freeze</div>
                         <div class="text">Temperature is -55 C at an internal pressure of 500 mTorr for 5 minutes</div>
@@ -530,7 +530,7 @@
   
   function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("freeze_slides");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
