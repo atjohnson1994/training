@@ -530,21 +530,12 @@
   
   function showSlides(n) {
     var i;
-    var slides_freeze = document.getElementsByClassName("freeze_slides");
-    if (n > slides_freeze.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides_freeze.length}
-    for (i = 0; i < slides_freeze.length; i++) {
-        slides_freeze[i].style.display = "none";
+    var slides = document.getElementsByClassName("freeze_slides");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-    slides[slideIndex-1].style.display = "block";
-    var t;
-    var slides_dry = document.getElementsByClassName("dry_slides");
-    if (n > slides_dry.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides_dry.length}
-    for (t = 0; t < slides_dry.length; t++) {
-        slides_dry[i].style.display = "none";
-    }
-    slides_dry[slideIndex-1].style.display = "block";
   }
   
   // Automatically show the first slide when the page loads
