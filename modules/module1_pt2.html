@@ -325,9 +325,6 @@
                     <img src="../images/#.png">
                   
                 </div>
-
-
-                  
                   <br>
                   <div class="container_question">
                     <h2>Practice Problem 1:</h2>
@@ -539,6 +536,7 @@
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    slides[slideIndex-1].style.display = "block";
   }
   
   // Automatically show the first slide when the page loads
