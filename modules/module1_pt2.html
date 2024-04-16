@@ -248,43 +248,43 @@
                     at -60 C for 240 minutes before continuing to the next step. The freezing stage of the protocol ends with final freeze, 
                     which holds the temperature at -55 C for 5 minutes at a pressure of 500 MT.</p>
                       <div class="slideshow-container">
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_arrow.png" style="width:70%">
                         <div class="text">Primary Drying Phase</div>
                         <div class="text">The primary dry phase contains 6 steps.</div>
                       </div>
                     
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_metrics_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Phase Metrics</div>
                         <div class="text">SHELF SETPT/Temperature (C), TIME (minutes), & VACUUM SETPT (mT)</div>
                       </div>
                     
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_1_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Phase Step 1</div>
                         <div class="text">Temperature is -40 C and Time is set to 0</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_2_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Phase Step 2</div>
                         <div class="text">Temperature remains at -40 C, but Time is set to 180 minutes</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_3_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 3</div>
                         <div class="text">Temperature rises to -25 and Time is set to 0</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_4_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 4</div>
                         <div class="text">Temperature remains at -25 C for 630 minutes</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_5_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 5</div>
                         <div class="text">Temperature increases to 0 C</div>
@@ -296,15 +296,15 @@
                         <div class="text">Temperature remains at 0 C for 60 minutes</div>
                       </div>
 
-                      <div class="mySlides">
+                      <div class="mySlides2">
                         <img src="../images/protocol_14_secondary_dry_arrow.png" style="width:70%">
                         <div class="text">Secondary Dry</div>
                         <div class="text">Temperature increases to 25 C for 120 minutes at a pressure of 0 mT</div>
                       </div>
 
                      
-                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides2(1)">&#10095;</a>
                     </div>
                     <p>Up next in this protocol is the drying stage. Where the freeze dryer reduces pressure to 0 MT, while slightly warming 
                     up the temperature to -40 C. The protocol progresses through the drying steps before finishing the protocol in secondary dry.</p>
@@ -542,5 +542,33 @@
   // Automatically show the first slide when the page loads
   window.onload = function() {
     showSlides(slideIndex);
+  };
+
+// slide show 2
+  var slideIndex2 = 1;
+  showSlides2(slideIndex2);
+  
+  function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+  }
+  
+  function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+  }
+  
+  function showSlides2(n) {
+    var i;
+    var slides2 = document.getElementsByClassName("mySlides2");
+    if (n > slides2.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides2.length}
+    for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+    }
+    slides2[slideIndex2-1].style.display = "block";
+  }
+  
+  // Automatically show the first slide when the page loads
+  window.onload = function() {
+    showSlides2(slideIndex2);
   };
   </script>
