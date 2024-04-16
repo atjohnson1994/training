@@ -192,142 +192,137 @@
                 <br>
                   <div class="container_content">
                     <h2>Freeze Dryer Operation</h2>
-                    <h3>Freezing Phase</h3>
+                    <h3>Freeze Dryer Protocol</h3>
                     <p>During each phase of the freeze drying protocol, 
-                    there are several steps that the freeze dryer will complete. Each step has values for time, temperature, and some steps have pressure. 
+                    there are steps that the freeze dryer progresses through. Protocol steps can be thought of as the steps of any recipe. 
+                    Each one is an important event that must occur for the water to be successfully removed from the chemistry. 
+                    For each step, there's a duration and required temperature. The final freeze and drying phases also have a required pressure. 
                     For the protocol to progress through a step, 
-                    the internal temperature and pressure must reach the listed values in the protocol. Additionally, if there is a time value, 
-                    the protocol must remain in that step for the listed time.</p>
+                    the internal temperature and pressure must reach the listed value in that step. Additionally, 
+                    the freeze dryer must remain in that step for the listed time.</p>
+                    <h3>Loading Step</h3>
+                    <p>To start the freeze drying process, you will load the protocol on the freeze dryer.</p>
+                      <div class="slideshow-container">
+                      <div class="mySlides3">
+                        <img src="../images/protocol_14_fd_arrow.png" style="width:70%">
+                        <div class="text">1. Select the "FREEZE DRYING" tab</div>
+                      </div>
+                      <div class="mySlides3">
+                        <img src="../images/protocol_14_existing_arrow.png" style="width:70%">
+                        <div class="text">2. Select the "EXISTING" button</div>
+                      </div>
+                        <div class="mySlides3">
+                        <img src="../images/protocol_14_download_arrow.png" style="width:70%">
+                        <div class="text">3. Select "ASAY-SFW-0014" from the attached USB then select "Open"</div>
+                      </div>
+                        <div class="mySlides3">
+                        <img src="../images/protocol_14_start_arrow.png" style="width:70%">
+                        <div class="text">4. Select the start button</div>
+                      </div>
+                          <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+                          <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+                      </div>
+                    <h3>Freeze Phase</h3>
+                    <p>The freeze phase consists of two steps followed by a final freeze. Step 1 starts out by dropping the temperature 
+                      of the product to -60 C. Once that step has successfully completed, step 2 commences by holding the product at that 
+                      temperature for 240 minutes. After 240 minutes have passed, final freeze happens, activating the vacuum and removing 
+                      the internal pressure down to 500 mT.
+                    </p>
                     <div class="slideshow-container">
                       <div class="mySlides">
                         <img src="../images/protocol_14_freeze_arrow.png" style="width:70%">
-                        <div class="text">Freezing Phase</div>
-                        <div class="text">The initial freezing phase contains 2 steps followed by final freeze</div>
+                        <div class="text">Freeze Phase</div>
                       </div>
                     
                       <div class="mySlides">
                         <img src="../images/protocol_14_metrics_arrow.png" style="width:70%">
-                        <div class="text">Freezing Phase Metrics</div>
-                        <div class="text">SHELF SETPT/Temperature (C) & TIME (minutes)</div>
+                        <div class="text">SHELF SETPT or Temperature (C) & Time (minutes)</div>
                       </div>
                     
                       <div class="mySlides">
                         <img src="../images/protocol_14_step_1_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase Step 1</div>
-                        <div class="text">Temperature is -60 C and Time is set to 0</div>
                       </div>
 
                       <div class="mySlides">
                         <img src="../images/protocol_14_step_2_arrow.png" style="width:70%">
                         <div class="text">Freezing Phase Step 2</div>
-                        <div class="text">Temperature remains at -60 C, but Time is set to 240 minutes</div>
                       </div>
 
                       <div class="mySlides">
                         <img src="../images/protocol_14_null_arrow.png" style="width:70%">
-                        <div class="text">Freezing Phase Null Fields</div>
-                        <div class="text">Steps that only contain 0 are skipped</div>
+                        <div class="text">Freezing Phase Null Values (skipped)</div>
                       </div>
 
                       <div class="mySlides">
                         <img src="../images/protocol_14_final_arrow.png" style="width:70%">
                         <div class="text">Final Freeze</div>
-                        <div class="text">Temperature is -55 C at an internal pressure of 500 mTorr for 5 minutes</div>
                       </div>
                     
                       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                       <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
                     <h3>Primary & Secondary Dry</h3>
-                    <p>Up next in this protocol is the drying phase. The freeze dryer reduces pressure to 0 MT, while slightly warming up the temperature to -40 C. The protocol progresses through the drying steps before finishing the protocol in secondary dry.</p>
+                    <p>The drying phase gradually warms the product back up while simultaneously removing the air and water vapor inside the chamber. 
+                      The freeze dryer increases the temperature to -40 C, then holds that temperature for 3 hours. 
+                      The temperature is then increased to -25 C for 10.5 hours! 
+                      The temperature is increased again bringing it up to 0 C for 1 hour, then 25 C for 2 hours.
+                    </p>
                       <div class="slideshow-container">
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_arrow.png" style="width:70%">
-                        <div class="text">Primary Drying Phase</div>
-                        <div class="text">The primary dry phase contains 6 steps.</div>
+                        <div class="text">Primary Dry Phase</div>
                       </div>
                     
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_metrics_arrow.png" style="width:70%">
-                        <div class="text">Primary Dry Phase Metrics</div>
-                        <div class="text">SHELF SETPT/Temperature (C), TIME (minutes), & VACUUM SETPT (mT)</div>
+                        <div class="text">SHELF SETPT or Temperature (C), Time (minutes), & VACUUM SETPT or Pressure (mT)</div>
                       </div>
                     
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_1_arrow.png" style="width:70%">
-                        <div class="text">Primary Dry Phase Step 1</div>
-                        <div class="text">Temperature is -40 C and Time is set to 0</div>
+                        <div class="text">Primary Dry Step 1</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_2_arrow.png" style="width:70%">
-                        <div class="text">Primary Dry Phase Step 2</div>
-                        <div class="text">Temperature remains at -40 C, but Time is set to 180 minutes</div>
+                        <div class="text">Primary Dry Step 2</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_3_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 3</div>
-                        <div class="text">Temperature rises to -25 and Time is set to 0</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_4_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 4</div>
-                        <div class="text">Temperature remains at -25 C for 630 minutes</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_5_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 5</div>
-                        <div class="text">Temperature increases to 0 C</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="../images/protocol_14_primary_dry_step_6_arrow.png" style="width:70%">
                         <div class="text">Primary Dry Step 6</div>
-                        <div class="text">Temperature remains at 0 C for 60 minutes</div>
                       </div>
 
                       <div class="mySlides2">
                         <img src="../images/protocol_14_secondary_dry_arrow.png" style="width:70%">
                         <div class="text">Secondary Dry</div>
-                        <div class="text">Temperature increases to 25 C for 120 minutes at a pressure of 0 mT</div>
                       </div>
 
                      
                       <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
                       <a class="next" onclick="plusSlides2(1)">&#10095;</a>
                     </div>
-                    <h3>Header</h3>
-                    <p>Paragraph</p>
-                      <div class="slideshow-container">
-                      <div class="mySlides3">
-                        <img src="../images/protocol_14_fd_arrow.png" style="width:70%">
-                        <div class="text">Freeze Drying Tab</div>
-                        <div class="text">First, select the freeze drying tab</div>
-                      </div>
-                      <div class="mySlides3">
-                        <img src="../images/protocol_14_existing_arrow.png" style="width:70%">
-                        <div class="text">Existing Recipes</div>
-                        <div class="text">Select the existing tab</div>
-                      </div>
-                        <div class="mySlides3">
-                        <img src="../images/protocol_14_download_arrow.png" style="width:70%">
-                        <div class="text">Download Recipe</div>
-                        <div class="text">Select ASAY-SFW-0014, then select open</div>
-                      </div>
-                        <div class="mySlides3">
-                        <img src="../images/protocol_14_start_arrow.png" style="width:70%">
-                        <div class="text">Start Freeze Dryer</div>
-                        <div class="text">Select the start button</div>
-                      </div>
-                          <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
-                          <a class="next" onclick="plusSlides3(1)">&#10095;</a>
-                      </div>
+                    
                     <h3>Finish Loading</h3>
                     <p>When the freeze dryer has been fully loaded with product, you will select the green button 
-                    labeled Finished Loading</p>
+                    labeled "Finished Loading". This ends the loading step and begins the remainder of the protocol. 
+                    Make sure that each shelf in the freeze dryer is filled! Use empty racks to fill any unfilled shelves.</p>
                       <img src="../images/protocol_14_finished_loading_arrow.png" style="width:70%">
                 </div>
                   <br>
