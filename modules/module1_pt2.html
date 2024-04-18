@@ -46,21 +46,18 @@
                 </div>
                 </a>
                 </div>
-                  <video controls>
-                    <source src="#">
-                    Your browser does not support HTML video.
-                  </video>
+
                   <div class="container_content">
                     <h2>Part 2: Freeze Dryers</h2>
                     <h3>Temperature and Pressure</h3>
-                    <p>Two primary factors, namely temperature and pressure, dictate the phase (solid, liquid, or gas) that a substance will assume. 
+                    <p>Two primary factors, namely temperature and pressure, decides the phase (solid, liquid, or gas) that a substance will assume. 
                         To transition to a specific phase, both temperature and pressure must fall within certain thresholds. 
                         In the absence of these conditions, the substance cannot adopt that particular phase. 
-                        The accompanying chart illustrates the requisite pressure and temperature parameters for different phases of water. As depicted in the chart, 
+                        The accompanying chart illustrates the required pressure and temperature parameters for different phases of water. As depicted in the chart, 
                         water can exist in a liquid state at sea level (where pressure equals 1 atm) if the temperature falls between the 
-                        freezing point at sea level (32 degrees Fahrenheit or 0 degrees Celsius) and the boiling point at sea level (212 F or 100 C). 
-                        However, if the temperature rises above 32 F while maintaining atmospheric pressure below 0.06 atmospheres (ATM), 
-                        the water reaches a sufficiently warm state for thawing, yet lacks the requisite pressure for liquid formation, 
+                        freezing point at sea level (0 C) and the boiling point at sea level (100 C). 
+                        However, if the temperature rises above 0 C while maintaining atmospheric pressure below 0.06 atm, 
+                        the water reaches a sufficiently warm state for thawing, yet lacks the required pressure for liquid formation, 
                         thus transitioning into a gas.</p>
                           <img src='../images/phases.png' style="width:70%">
                     
@@ -69,22 +66,24 @@
                         Similar to evaporation, sublimation takes place when a molecule acquires adequate energy to break away from its neighboring molecules. 
                         Water undergoes sublimation from its solid state (ice) to its gaseous state (vapor) when its molecules attain the necessary energy to break free, 
                         yet the conditions are unsuitable for the formation of a liquid phase.</p>
+                        <img src='../images/sublimation_definition.png' style="width:70%">
                     
                     <h3>Freeze Drying Process</h3>
                     <p>A freeze dryer contains a freeze-drying chamber equipped with multiple shelves linked to heating elements, 
-                        a freezing coil connected to a refrigerator compressor, and a vacuum pump. In most machines, 
-                        the substance intended for preservation is positioned on the shelves while still unfrozen. Upon sealing the chamber and initiating the procedure, 
-                        the compressors activate to reduce the chambers temperature. The material solidifies as it freezes, thereby isolating the water from its surroundings at a molecular level, 
-                        despite the waters continued presence. Subsequently, the machine activates the vacuum pump to expel air from the chamber, reducing the atmospheric pressure to below 0.06 ATM. 
-                        Meanwhile, the heating units gently apply heat to the shelves, prompting the ice to undergo a phase change. Given the low pressure, the ice transitions directly into water vapor. 
-                        This vapor exits the freeze-drying chamber, passing over the freezing coil where it condenses into solid ice, akin to water forming frost on a chilly day. 
-                        This cycle persists for numerous hours, allowing the material to gradually desiccate. 
-                        The protracted duration of the process is essential as excessive heating can alter the materials composition and structure significantly. 
+                        a freezing coil connected to a refrigerator compressor, and a vacuum pump. Upon sealing the chamber and initiating the procedure, 
+                        the compressors activate to reduce the chambers temperature. The material solidifies as it freezes, 
+                        thereby isolating the water from its surroundings at a molecular level, 
+                        despite the waters continued presence. Subsequently, the machine activates the vacuum pump to expel air from the chamber, 
+                        reducing the atmospheric pressure to below 0.06 atm. 
+                        Meanwhile, the heating units gently apply heat to the shelves, prompting the ice to undergo a phase change. Given the low pressure, 
+                        the ice transitions directly into water vapor. 
+                        This vapor exits the freeze-drying chamber, passing over the freezing coil where it condenses into solid ice. 
+                        This cycle persists for numerous hours, allowing the material to gradually dry. 
+                        The extended duration of the process is essential as excessive heating can alter the materials composition and structure significantly. 
                         Moreover, hastening the sublimation process may generate more water vapor within a given timeframe than the pumping system can effectively remove from the chamber, 
-                        potentially reintroducing moisture to the material and compromising its quality. Upon achieving sufficient dryness, the material is sealed within a moisture-free package, 
-                        often supplemented with an oxygen-absorbing substance. If securely sealed, the material can remain shelf-stable for an extended period, 
-                        retaining its integrity until rehydrated with a small amount of water (though minute moisture traces may remain, 
-                        leading to eventual spoilage). Under ideal circumstances, the substance undergoes the entire process with minimal alteration.</p>
+                        potentially reintroducing moisture to the material and compromising its quality. 
+                        If securely sealed, the material can remain shelf-stable for an extended period, 
+                        retaining its integrity until rehydrated. Under ideal circumstances, the substance undergoes the entire process with minimal alteration.</p>
                   </div>
                     <br>
                     <div class="container_question">
@@ -93,8 +92,11 @@
                       <p>Why does the chemistry transition from a solid straight to a gas instead of becoming a liquid first?</p>
                       <div class="options">
                         <label><input type="radio" name="q1" onclick=que_sel1(0)> Temperature is too low</label>
+                        <br>
                         <label><input type="radio" name="q1" onclick=que_sel1(1)> Temperature is too high</label>
+                        <br>
                         <label><input type="radio" name="q1" onclick=que_sel1(2)> Pressure is too low</label>
+                        <br>
                         <label><input type="radio" name="q1" onclick=que_sel1(3)> Pressure is too high</label>
                         <br>
                         <br>
@@ -148,8 +150,11 @@
                     <p>What is the purpose of secondary dry?</p>
                     <div class="options">
                       <label><input type="radio" name="q2" onclick=que_sel2(0)> To sublimate the water</label>
+                      <br>
                       <label><input type="radio" name="q2" onclick=que_sel2(1)> To remove the ionically-bound water molecules</label>
+                      <br>
                       <label><input type="radio" name="q2" onclick=que_sel2(2)> To evaporate the water</label>
+                      <br>
                       <label><input type="radio" name="q2" onclick=que_sel2(3)> To melt the ice present in the pouch</label>
                       <br>
                       <br>
@@ -381,7 +386,7 @@
                   <br>
                   <div class="container_question">
                     <h2>Practice Problem 2:</h2>
-                    <p>Referencing the images from above, list the current readings for the following measurements:</p>
+                    <p>Referencing the last image from above, list the current readings for the following measurements:</p>
                     <p>Shelf temperature</p>
                     <select id="practice_pipette_select" onchange="q1_ps(this.value)">
                       <option value="*">*</option>
@@ -433,7 +438,7 @@
                   <br>
                   <div class="container_question">
                     <h2>Practice Problem 3:</h2>
-                    <p>Referencing the images from above, what is the status for the following features:</p>
+                    <p>Referencing the last image from above, what is the status for the following features:</p>
                     <p>Stoppering</p>
                     <select id="practice_pipette_select" onchange="q2_ps(this.value)">
                       <option value="*">*</option>
