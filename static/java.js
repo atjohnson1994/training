@@ -1,6 +1,6 @@
 function check_answer0(input) {
   console.log(input)
-  if (input0 == 0 && input1 == 5 && input2 == 4 && ps0 == 'p1000') {
+  if (input0 == 0 && input1 == 5 && input2 == 4 && ps0 == 0) {
     console.log('Correct')
     document.getElementById('q0_a').innerHTML = 'Correct'
     document.getElementById('q0_a').style.color = 'white'
@@ -32,7 +32,7 @@ function dial2(dial_input) {
 
 function check_answer1(input) {
   console.log(input)
-  if (input3 == 1 && input4 == 5 && input5 == 4 && ps1 == 'p200') {
+  if (input3 == 1 && input4 == 5 && input5 == 4 && ps1 == 1) {
     console.log('Correct')
     document.getElementById('q1_a').innerHTML = 'Correct'
     document.getElementById('q1_a').style.color = 'white'
@@ -64,7 +64,7 @@ function dial5(dial_input) {
 
 function check_answer2(input) {
   console.log(input)
-  if (input6 == 1 && input7 == 8 && input8 == 0 && ps2 == 'p20') {
+  if (input6 == 1 && input7 == 8 && input8 == 0 && ps2 == 2) {
     console.log('Correct')
     document.getElementById('q2_a').innerHTML = 'Correct'
     document.getElementById('q2_a').style.color = 'white'
