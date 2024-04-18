@@ -148,8 +148,8 @@
                     <p>What is the purpose of secondary dry?</p>
                     <div class="options">
                       <label><input type="radio" name="q2" onclick=que_sel2(0)> To sublimate the water</label>
-                      <label><input type="radio" name="q2" onclick=que_sel2(1)> To evaporate the water</label>
-                      <label><input type="radio" name="q2" onclick=que_sel2(2)> To remove the ionically-bound water molecules</label>
+                      <label><input type="radio" name="q2" onclick=que_sel2(1)> To remove the ionically-bound water molecules</label>
+                      <label><input type="radio" name="q2" onclick=que_sel2(2)> To evaporate the water</label>
                       <label><input type="radio" name="q2" onclick=que_sel2(3)> To melt the ice present in the pouch</label>
                       <br>
                       <br>
@@ -193,6 +193,14 @@
                           <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
                           <a class="next" onclick="plusSlides3(1)">&#10095;</a>
                       </div>
+
+                      <div class="dots" style="text-align:center">
+                        <span class="dot3" onclick="currentSlide(1)"></span>
+                        <span class="dot3" onclick="currentSlide(2)"></span>
+                        <span class="dot3" onclick="currentSlide(3)"></span>
+                        <span class="dot3" onclick="currentSlide(4)"></span>
+                      </div>
+
                     <h3>Freeze Phase</h3>
                     <p>The freeze phase consists of two steps followed by a final freeze. Step 1 starts out by dropping the temperature 
                       of the product to -60 C. Once that step has successfully completed, step 2 commences by holding the product at that 
@@ -232,6 +240,16 @@
                     
                       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                      <div class="dots" style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                      </div>
+
                     </div>
                     <h3>Primary & Secondary Dry</h3>
                     <p>The drying phase gradually warms the product back up while simultaneously removing the air and water vapor inside the chamber. 
@@ -289,7 +307,19 @@
                       <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
                       <a class="next" onclick="plusSlides2(1)">&#10095;</a>
                     </div>
-                    
+
+                    <div class="dots" style="text-align:center">
+                      <span class="dot2" onclick="currentSlide(1)"></span>
+                      <span class="dot2" onclick="currentSlide(2)"></span>
+                      <span class="dot2" onclick="currentSlide(3)"></span>
+                      <span class="dot2" onclick="currentSlide(4)"></span>
+                      <span class="dot2" onclick="currentSlide(5)"></span>
+                      <span class="dot2" onclick="currentSlide(6)"></span>
+                      <span class="dot2" onclick="currentSlide(7)"></span>
+                      <span class="dot2" onclick="currentSlide(8)"></span>
+                      <span class="dot2" onclick="currentSlide(9)"></span>
+                    </div>
+
                     <h3>Finish Loading</h3>
                     <p>When the freeze dryer has been fully loaded with product, you will select the green button 
                     labeled "Finished Loading". This ends the loading step and begins the remainder of the protocol. 
@@ -502,12 +532,17 @@
   function showSlides(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
     slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
   }
   
   // Automatically show the first slide when the page loads
@@ -530,12 +565,17 @@
   function showSlides2(n) {
     var i;
     var slides2 = document.getElementsByClassName("mySlides2");
+    var dots2 = document.getElementsByClassName("dot2");
     if (n > slides2.length) {slideIndex2 = 1}
     if (n < 1) {slideIndex2 = slides2.length}
     for (i = 0; i < slides2.length; i++) {
         slides2[i].style.display = "none";
     }
+    for (i = 0; i < dots2.length; i++) {
+      dots2[i].className = dots2[i].className.replace(" active", "");
+  }
     slides2[slideIndex2-1].style.display = "block";
+    dots2[slideIndex2-1].className += " active";
   }
   
   // Automatically show the first slide when the page loads
@@ -559,12 +599,17 @@
   function showSlides3(n) {
     var i;
     var slides3 = document.getElementsByClassName("mySlides3");
+    var dots3 = document.getElementsByClassName("dot3");
     if (n > slides3.length) {slideIndex3 = 1}
     if (n < 1) {slideIndex3 = slides3.length}
     for (i = 0; i < slides3.length; i++) {
         slides3[i].style.display = "none";
     }
+    for (i = 0; i < dots3.length; i++) {
+      dots3[i].className = dots3[i].className.replace(" active", "");
+  }
     slides3[slideIndex3-1].style.display = "block";
+    dots3[slideIndex3-1].className += " active";
   }
   
   // Automatically show the first slide when the page loads
