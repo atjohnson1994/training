@@ -138,6 +138,16 @@ width: 300px;
   text-align: center;
   cursor: pointer; /* Add cursor style */
 }
+.card_next_prev {
+  width: 200px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer; /* Add cursor style */
+  }
 .wid {
   width: 300px;
     background-color: #f9f9f9;
@@ -147,7 +157,7 @@ width: 300px;
     margin: 10px;
 
   }
-.card:hover {
+.card:hover, .card_next_prev:hover {
   background-color: #e0e0e0; /* Change background color on hover */
 }
 footer {
