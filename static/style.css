@@ -90,6 +90,8 @@ button:active {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.8;
 }
 .container_content {
   max-width: 1000px;
@@ -99,6 +101,8 @@ button:active {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height: 1.8;
 }
 nav {
   background-color: #f4f4f4;
@@ -199,7 +203,7 @@ footer {
   margin-top: 20px;
 }
 
-.dot, .dot2, .dot3 {
+.dot, .dot2, .dot3, .dot4 {
   height: 15px;
   width: 15px;
   margin: 0 5px;
@@ -211,4 +215,10 @@ footer {
 
 .active {
   background-color: #da3535;
+}
+
+.text {
+  color:red;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
 }
