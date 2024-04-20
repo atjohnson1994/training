@@ -1,549 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script type="text/javascript" src="../static/java.js"></script>
-        <link rel="stylesheet" type="text/css" href="../static/style.css">
-    </head>
-    <body>
-        <div id="home"> <!-- Add padding to the content -->
-            <div>
-              <div class="row">
-                <div>
-                  <!-- Title and description -->
-                  <div id="title">
-                    <h1 >Module 1: Trees & Freeze Dryers</h1>
-                  </div>
-                  <nav>
-                    <ul>
-                        <li><a href="../formulation.html">Home</a></li>
-                        <li><a href="modules.html">Modules</a></li>
-                        <li><a href="../quizzes/quizzes.html">Quizzes</a></li>
-                        <li><a href="#">Scores</a></li>
-                    </ul>
-                </nav>
-                <div class="container">
-                <a href="module1.html">
-                <div class="card">
-                  <h2>Part 1: Plunger Trees</h2>
-                </div>
-                </a>
-                <a href="module1_pt2.html">
-                <div class="card">
-                  <h2>Part 2: Freeze Dryers</h2>
-                </div>
-                </a>
-                <a href="#">
-                  <div class="card">
-                    <h2>Relevent WIDs</h2>
-                  </div>
-                  </a>
-                  <a href="#">
-                <div class="card">
-                  <h2>Relevent Batch Records</h2>
-                </div>
-                </a>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-                  <div class="container_content">
-                    <h2>Part 2: Freeze Dryers</h2>
-                    <h3>Temperature and Pressure</h3>
-                    <p>Two primary factors, namely temperature and pressure, decides the phase (solid, liquid, or gas) that a substance will assume. 
-                        To transition to a specific phase, both temperature and pressure must fall within certain thresholds. 
-                        In the absence of these conditions, the substance cannot adopt that particular phase. 
-                        The accompanying chart illustrates the required pressure and temperature parameters for different phases of water. As depicted in the chart, 
-                        water can exist in a liquid state at sea level (1 atm) if the temperature falls between the 
-                        freezing point at sea level (0 C) and the boiling point at sea level (100 C). 
-                        However, if the temperature rises above 0 C while maintaining atmospheric pressure below 0.06 atm, 
-                        the water reaches a sufficiently warm state for thawing, yet lacks the required pressure for liquid formation, 
-                        thus transitioning into a gas.</p>
-                          <img src='../images/phases.png' style="width:80%">
-                    
-                    <h3>Sublimation</h3>
-                    <p>Freeze-drying relies on the concept of sublimation, the direct transition of a solid substance into a gas. 
-                        Similar to evaporation, sublimation takes place when a molecule acquires adequate energy to break away from its neighboring molecules. 
-                        Water undergoes sublimation from its solid state (ice) to its gaseous state (vapor) when its molecules attain the necessary energy to break free, 
-                        yet the conditions are unsuitable for the formation of a liquid phase.</p>
-                        <img src='../images/sublimation_definition.png' style="width:80%">
-                    
-                    <h3>Freeze Drying Process</h3>
-                    <p>A freeze dryer contains a freeze-drying chamber equipped with multiple shelves linked to heating elements, 
-                        a freezing coil connected to a refrigerator compressor, and a vacuum pump. Upon sealing the chamber and initiating the procedure, 
-                        the compressors activate to reduce the chambers temperature. The material solidifies as it freezes, 
-                        thereby isolating the water from its surroundings at a molecular level, 
-                        despite the waters continued presence. Subsequently, the machine activates the vacuum pump to expel air from the chamber, 
-                        reducing the atmospheric pressure to below 0.06 atm. 
-                        Meanwhile, the heating units gently apply heat to the shelves, prompting the ice to undergo a phase change. Given the low pressure, 
-                        the ice transitions directly into water vapor. 
-                        This vapor exits the freeze-drying chamber, passing over the freezing coil where it condenses into solid ice. 
-                        This cycle persists for numerous hours, allowing the material to gradually dry. 
-                        The extended duration of the process is essential as excessive heating can alter the materials composition and structure significantly. 
-                        Moreover, hastening the sublimation process may generate more water vapor within a given timeframe than the pumping system can effectively remove from the chamber, 
-                        potentially reintroducing moisture to the material and compromising its quality. 
-                        If securely sealed, the material can remain shelf-stable for an extended period, 
-                        retaining its integrity until rehydrated. Under ideal circumstances, the substance undergoes the entire process with minimal alteration.</p>
-                  </div>
-                    <br>
-                    <div class="container_question">
-                    <div class="question">
-                      <h1>Question 1:</h1>
-                      <p>Why does the chemistry transition from a solid straight to a gas instead of becoming a liquid first?</p>
-                      <div class="options">
-                        <label><input type="radio" name="q1" onclick=que_sel1(0)> Temperature is too low</label>
-                        <br>
-                        <label><input type="radio" name="q1" onclick=que_sel1(1)> Temperature is too high</label>
-                        <br>
-                        <label><input type="radio" name="q1" onclick=que_sel1(2)> Pressure is too low</label>
-                        <br>
-                        <label><input type="radio" name="q1" onclick=que_sel1(3)> Pressure is too high</label>
-                        <br>
-                        <br>
-                        <button type="button" onclick="check_que1()">Check Answer</button>
-                        <div id="que1_box">
-                          <p id="que1_a" color="white"></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                
-                <br>
-                <div class="container_content">
+  <!--JavaScript-->
+  <script type="text/javascript" src="../static/java.js"></script>
 
-                    <h3>Freeze Drying Phases:</h3>
-                    <ol>
-                        <p>1. Freeze</p>
-                        <p>2. Primary Dry</p>
-                        <p>3. Secondary Dry</p>
-                    </ol>
-                    <h3>Freeze</h3>
-                    <p>Freeze drying is a process that removes water from a substance. 
-                        The freeze dryer lowers the temperature, causing the water to form ice. 
-                        When the water solidifies, it separates molecularly from the chemistry while remaining present in the pouch.</p>
-                      <img src='../images/phases_freeze.png' style="width:80%">
-                    
-                        <h3>Primary Dry (sublimation)</h3>
-                        <p>The next stage is primary dry, also known as sublimation, 
-                            during which the pressure decreases significantly while slight heat is applied to the substance to facilitate the sublimation of water. 
-                            The vacuum in the freeze dryer accelerates this sublimation process by removing the water vapor from the chamber. 
-                            Furthermore, the freeze dryers cold condenser offers a platform for water vapor to attach and solidify back into ice, 
-                            safeguarding the vacuum pump from water vapor. 
-                            Roughly 95% of the moisture within the substance is eliminated during this phase. 
-                            Primary drying progresses slowly so that the majority of water can be pulled from the substance.</p>
-                        <img src="../images/phases_primary_dry.png" style="width:80%">
-                      
-                        <h3>Secondary Dry (adsorption)</h3>
-                        <p>In the final phase, known as secondary drying or adsorption, 
-                          the focus is on eliminating ionically-bound water molecules. 
-                          By elevating the temperature beyond that of the primary drying phase, 
-                          the bonds between the material and water molecules are disrupted. 
-                          This ensures the retention of a porous structure in the freeze-dried materials. 
-                          Typically, most substances can be dried to achieve a residual moisture content of 1-5%.</p>
-                        <img src="../images/phases_secondary_dry.png" style="width:80%">
-                  </div>
-
-                  <br>
-                  <div class="container_question">
-                  <div class="question">
-                    <h1>Question 2:</h1>
-                    <p>What is the purpose of secondary dry?</p>
-                    <div class="options">
-                      <label><input type="radio" name="q2" onclick=que_sel2(0)> To sublimate the water</label>
-                      <br>
-                      <label><input type="radio" name="q2" onclick=que_sel2(1)> To remove the ionically-bound water molecules</label>
-                      <br>
-                      <label><input type="radio" name="q2" onclick=que_sel2(2)> To evaporate the water</label>
-                      <br>
-                      <label><input type="radio" name="q2" onclick=que_sel2(3)> To melt the ice present in the pouch</label>
-                      <br>
-                      <br>
-                      <button type="button" onclick="check_que2()">Check Answer</button>
-                      <div id="que2_box">
-                        <p id="que2_a" color="white"></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-                  <div class="container_content">
-                    <h2>Freeze Dryer Operation</h2>
-                    <h3>Freeze Dryer Protocol</h3>
-                    <p>During each phase of the freeze drying protocol, 
-                    there are steps that the freeze dryer progresses through. Protocol steps can be thought of as the steps of any recipe. 
-                    Each one is an important event that must occur for the water to be successfully removed from the chemistry. 
-                    For each step, there's a duration and required temperature. The final freeze and drying phases also have a required pressure. 
-                    For the protocol to progress through a step, 
-                    the internal temperature and pressure must reach the listed value in that step. Additionally, 
-                    the freeze dryer must remain in that step for the listed time.</p>
-                    <h3>Loading Phase</h3>
-                    <p>To start the freeze drying process, you will load the protocol on the freeze dryer.</p>
-                      <div class="slideshow-container">
-                      <div class="mySlides3">
-                        <img src="../images/protocol_14_fd_arrow.png" style="width:80%">
-                        <div class="text">1. Select the "FREEZE DRYING" tab</div>
-                      </div>
-                      <div class="mySlides3">
-                        <img src="../images/protocol_14_existing_arrow.png" style="width:80%">
-                        <div class="text">2. Select the "EXISTING" button</div>
-                      </div>
-                        <div class="mySlides3">
-                        <img src="../images/protocol_14_download_arrow.png" style="width:80%">
-                        <div class="text">3. Select "ASAY-SFW-0014" from the attached USB then select "Open"</div>
-                      </div>
-                        <div class="mySlides3">
-                        <img src="../images/protocol_14_start_arrow.png" style="width:80%">
-                        <div class="text">4. Select the start button</div>
-                      </div>
-                          <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
-                          <a class="next" onclick="plusSlides3(1)">&#10095;</a>
-                      </div>
-
-                      <div class="dots" style="text-align:center">
-                        <span class="dot3" onclick="currentSlide3(1)"></span>
-                        <span class="dot3" onclick="currentSlide3(2)"></span>
-                        <span class="dot3" onclick="currentSlide3(3)"></span>
-                        <span class="dot3" onclick="currentSlide3(4)"></span>
-                      </div>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
 
 
-                      <h3>Finish Loading</h3>
-                    <p>When the freeze dryer has been fully loaded with product, you will select the green button 
-                    labeled "Finished Loading". This ends the loading step and begins the remainder of the protocol. 
-                    Make sure that each shelf in the freeze dryer is filled! Use empty racks to fill any unfilled shelves.</p>
-                     
-                    <div class="slideshow-container">
-                      <div class="mySlides4">
-                        <img src="../images/protocol_14_finished_loading_arrow.png" style="width:80%">
-                        <div class="text">1. Select the "FINISHED LOADING" tab</div>
-                      </div>
-                      <div class="mySlides4">
-                        <img src="../images/protocol_14_internal_pressure_arrow.png" style="width:80%">
-                        <div class="text">2. The internal pressure must reduce below 400,000 mTorr</div>
-                      </div>
-                        <div class="mySlides4">
-                        <img src="../images/protocol_14_pressure_trigger_arrow.png" style="width:80%">
-                        <div class="text">3. Make sure the pressure difference trigger is disabled</div>
-                      </div>
-                        <div class="mySlides4">
-                        <img src="../images/protocol_14_product_trigger_arrow.png" style="width:80%">
-                        <div class="text">4. Make sure the product average trigger is diabled</div>
-                      </div>
-                      <div class="mySlides4">
-                        <img src="../images/protocol_14_stoppering_arrow.png" style="width:80%">
-                        <div class="text">5. Make sure stoppering is set to automatic</div>
-                      </div>
-                          <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
-                          <a class="next" onclick="plusSlides4(1)">&#10095;</a>
-                      </div>
+<body>        
+  <!-- Title and description -->
+  <div id="title">
+    <h1 >Module 1: Trees & Freeze Dryers</h1>
+  </div>
 
-                      <div class="dots" style="text-align:center">
-                        <span class="dot4" onclick="currentSlide4(1)"></span>
-                        <span class="dot4" onclick="currentSlide4(2)"></span>
-                        <span class="dot4" onclick="currentSlide4(3)"></span>
-                        <span class="dot4" onclick="currentSlide4(4)"></span>
-                        <span class="dot4" onclick="currentSlide4(5)"></span>
-                      </div>
+  <!--Navigation Bar-->
+  <nav>
+    <ul>
+      <li><a href="../formulation.html">Home</a></li>
+      <li><a href="modules.html">Modules</a></li>
+      <li><a href="../quizzes/quizzes.html">Quizzes</a></li>
+      <li><a href="#">Scores</a></li>
+    </ul>
+  </nav>
 
-                
-
-
-                    <h3>Freeze Phase</h3>
-                    <p>The freeze phase consists of two steps followed by a final freeze. Step 1 starts out by dropping the temperature 
-                      of the product to -60 C. Once that step has successfully completed, step 2 commences by holding the product at that 
-                      temperature for 240 minutes. After 240 minutes have passed, final freeze happens, activating the vacuum and removing 
-                      the internal pressure down to 500 mT.
-                    </p>
-                    <div class="slideshow-container">
-                      <div class="mySlides">
-                        <img src="../images/protocol_14_freeze_arrow.png" style="width:80%">
-                        <div class="text">Freeze Phase</div>
-                      </div>
-                    
-                      <div class="mySlides">
-                        <img src="../images/protocol_14_metrics_arrow.png" style="width:80%">
-                        <div class="text">SHELF SETPT or Temperature (C) & Time (minutes)</div>
-                      </div>
-                    
-                      <div class="mySlides">
-                        <img src="../images/protocol_14_step_1_arrow.png" style="width:80%">
-                        <div class="text">Freezing Phase Step 1</div>
-                      </div>
-
-                      <div class="mySlides">
-                        <img src="../images/protocol_14_step_2_arrow.png" style="width:80%">
-                        <div class="text">Freezing Phase Step 2</div>
-                      </div>
-
-                      <div class="mySlides">
-                        <img src="../images/protocol_14_null_arrow.png" style="width:80%">
-                        <div class="text">Freezing Phase Null Values (skipped)</div>
-                      </div>
-
-                      <div class="mySlides">
-                        <img src="../images/protocol_14_final_arrow.png" style="width:80%">
-                        <div class="text">Final Freeze</div>
-                      </div>
-                    
-                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                      <div class="dots" style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                        <span class="dot" onclick="currentSlide(6)"></span>
-                      </div>
-
-                    </div>
-                    <h3>Primary & Secondary Dry Phases</h3>
-                    <p>The drying phase gradually warms the product back up while simultaneously removing the air and water vapor inside the chamber. 
-                      The freeze dryer increases the temperature to -40 C, then holds that temperature for 3 hours. 
-                      The temperature is then increased to -25 C for 10.5 hours! 
-                      The temperature is increased again bringing it up to 0 C for 1 hour, then 25 C for 2 hours.
-                    </p>
-                      <div class="slideshow-container">
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Phase</div>
-                      </div>
-                    
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_metrics_arrow.png" style="width:80%">
-                        <div class="text">SHELF SETPT or Temperature (C), Time (minutes), & VACUUM SETPT or Pressure (mT)</div>
-                      </div>
-                    
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_step_1_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Step 1</div>
-                      </div>
-
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_step_2_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Step 2</div>
-                      </div>
-
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_step_3_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Step 3</div>
-                      </div>
-
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_step_4_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Step 4</div>
-                      </div>
-
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_step_5_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Step 5</div>
-                      </div>
-
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_primary_dry_step_6_arrow.png" style="width:80%">
-                        <div class="text">Primary Dry Step 6</div>
-                      </div>
-
-                      <div class="mySlides2">
-                        <img src="../images/protocol_14_secondary_dry_arrow.png" style="width:80%">
-                        <div class="text">Secondary Dry</div>
-                      </div>
-
-                     
-                      <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-                      <a class="next" onclick="plusSlides2(1)">&#10095;</a>
-                    </div>
-
-                    <div class="dots" style="text-align:center">
-                      <span class="dot2" onclick="currentSlide2(1)"></span>
-                      <span class="dot2" onclick="currentSlide2(2)"></span>
-                      <span class="dot2" onclick="currentSlide2(3)"></span>
-                      <span class="dot2" onclick="currentSlide2(4)"></span>
-                      <span class="dot2" onclick="currentSlide2(5)"></span>
-                      <span class="dot2" onclick="currentSlide2(6)"></span>
-                      <span class="dot2" onclick="currentSlide2(7)"></span>
-                      <span class="dot2" onclick="currentSlide2(8)"></span>
-                      <span class="dot2" onclick="currentSlide2(9)"></span>
-                    </div>
-                  </div>
-                    
-                  <br>
-                  <div class="container_content">
-                  <img src="../images/protocol_14_finished_loading_arrow.png" style="width:90%">
-                  </div>
-                  <br>
-                  <div class="container_question">
-                    <h2>Practice Problem 1:</h2>
-                      <p>Referencing the image above, list the temperatures of the first four steps in the protocol.</p>
-                      <select id="practice_pipette_select" onchange="q0_ps(this.value)">
-                        <option value='*'>*</option>
-                        <option value="4">0</option>
-                        <option value="1">-25</option>
-                        <option value="2">-40</option>
-                        <option value="3">-55</option>
-                        <option value="0">-60</option>
-                      </select>
-                      <br>
-                      <br>
-                      <select id="practice_q0_i0" onchange="dial0(this.value)">
-                        <option value="*">*</option>
-                        <option value="4">0</option>
-                        <option value="1">-25</option>
-                        <option value="2">-40</option>
-                        <option value="3">-55</option>
-                        <option value="0">-60</option>
-
-                      </select>
-                        <br>
-                        <br>
-                      <select id="practice_q0_i1" onchange="dial1(this.value)">
-                        <option value="*">*</option>
-                        <option value="0">0</option>
-                        <option value="1">-25</option>
-                        <option value="2">-40</option>
-                        <option value="5">-55</option>
-                        <option value="4">-60</option>
-
-                      </select>
-                        <br>
-                        <br>
-                      <select id="practice_q0_i2" onchange="dial2(this.value)">
-                        <option value="*">*</option>
-                        <option value="0">0</option>
-                        <option value="1">-25</option>
-                        <option value="4">-40</option>
-                        <option value="3">-55</option>
-                        <option value="2">-60</option>
-
-                      </select>
-                      <br>
-                      <br>
-                      <button type="button" onclick="check_answer0()">Check Answer</button>
-                      <div id="q0_box">
-                        <p id="q0_a" color="white"></p>
-                      </div>
-                  </div>
-                  <br>
-                  
-                  <div class="container_question">
-                    <h2>Practice Problem 2:</h2>
-                    <p>Referencing the image above, list the current readings for the following measurements:</p>
-                    <p>Shelf temperature:</p>
-                    <select id="practice_pipette_select" onchange="q1_ps(this.value)">
-                      <option value="*">*</option>
-                      <option value='0'>4.6</option>
-                      <option value="2">4.0</option>
-                      <option value="1">4.1</option>
-                      <option value="3">-82.0</option>
-                    </select>
-                    <br>
-                    <br>
-                    <p>Condenser Temperature:</p>
-                    <select id="practice_q0_i0" onchange="dial3(this.value)">
-                      <option value="*">*</option>
-                      <option value="0">4.6</option>
-                      <option value="3">4.0</option>
-                      <option value="2">4.1</option>
-                      <option value="1">-82.0</option>
-
-                    </select>
-                      <br>
-                      <br>
-                      <p>Internal Pressure:</p>
-                    <select id="practice_q0_i1" onchange="dial4(this.value)">
-                      <option value="*">*</option>
-                      <option value="0">0</option>
-                      <option value="5">637,610</option>
-                      <option value="2">44</option>
-                      <option value="3">4</option>
-
-                    </select>
-                      <br>
-                      <br>
-                      <p>Probe 1 Temperature:</p>
-                    <select id="practice_q0_i2" onchange="dial5(this.value)">
-                      <option value="*">*</option>
-                      <option value="0">4.0</option>
-                      <option value="1">3.7</option>
-                      <option value="2">4.2</option>
-                      <option value="4">4.9</option>
-
-                    </select>
-                    <br>
-                    <br>
-                    <button type="button" onclick="check_answer1()">Check Answer</button>
-                    <div id="q1_box">
-                      <p id="q1_a" color="white"></p>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="container_question">
-                    <h2>Practice Problem 3:</h2>
-                    <p>Referencing the image above, what is the status for the following features:</p>
-                    <p>Stoppering:</p>
-                    <select id="practice_pipette_select" onchange="q2_ps(this.value)">
-                      <option value="*">*</option>
-                      <option value='2'>Automatic</option>
-                      <option value="1">Manual</option>
-
-                    </select>
-                    <br>
-                    <br>
-                    <p>Product Average Trigger:</p>
-                    <select id="practice_q0_i0" onchange="dial6(this.value)">
-                      <option value="*">*</option>
-                      <option value="1">Disabled</option>
-                      <option value="0">Enabled</option>
-
-                    </select>
-                      <br>
-                      <br>
-                      <p>Pressure Difference Trigger:</p>
-                    <select id="practice_q0_i1" onchange="dial7(this.value)">
-                      <option value="*">*</option>
-                      <option value="8">Disabled</option>
-                      <option value="1">Enabled</option>
-
-                    </select>
-                      <br>
-                      <br>
-                      <p>Loading Set Point:</p>
-                    <select id="practice_q0_i2" onchange="dial8(this.value)">
-                      <option value="*">*</option>
-                      <option value="0">Enabled</option>
-                      <option value="1">Disabled</option>
+  <!--Cards-->
+  <div class="container">
+    <a href="module1.html">
+      <div class="card">
+        <h2>Part 1: Plunger Trees</h2>
+      </div>
+    </a>
+    <a href="module1_pt2.html">
+      <div class="card">
+        <h2>Part 2: Freeze Dryers</h2>
+      </div>
+   </a>
+    <a href="#">
+      <div class="card">
+        <h2>Relevent WIDs</h2>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <h2>Relevent Batch Records</h2>
+      </div>
+    </a>
+  </div>
 
 
-                    </select>
-                    <br>
-                    <br>
-                    <button type="button" onclick="check_answer2()">Check Answer</button>
-                    <div id="q2_box">
-                      <p id="q2_a" color="white"></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!--Content Container-->
+  <div class="container_content">
+    <h2>Part 2: Freeze Dryers</h2>
+    <h3>Temperature and Pressure</h3>
+    <p>Two primary factors, namely temperature and pressure, decides the phase (solid, liquid, or gas) that a substance will assume. 
+        To transition to a specific phase, both temperature and pressure must fall within certain thresholds. 
+        In the absence of these conditions, the substance cannot adopt that particular phase. 
+        The accompanying chart illustrates the required pressure and temperature parameters for different phases of water. As depicted in the chart, 
+        water can exist in a liquid state at sea level (1 atm) if the temperature falls between the 
+        freezing point at sea level (0 C) and the boiling point at sea level (100 C). 
+        However, if the temperature rises above 0 C while maintaining atmospheric pressure below 0.06 atm, 
+        the water reaches a sufficiently warm state for thawing, yet lacks the required pressure for liquid formation, 
+        thus transitioning into a gas.</p>
+    <img src='../images/phases.png' style="width:80%">
+    
+    <h3>Sublimation</h3>
+    <p>Freeze-drying relies on the concept of sublimation, the direct transition of a solid substance into a gas. 
+        Similar to evaporation, sublimation takes place when a molecule acquires adequate energy to break away from its neighboring molecules. 
+        Water undergoes sublimation from its solid state (ice) to its gaseous state (vapor) when its molecules attain the necessary energy to break free, 
+        yet the conditions are unsuitable for the formation of a liquid phase.</p>
+        <img src='../images/sublimation_definition.png' style="width:80%">
+    
+    <h3>Freeze Drying Process</h3>
+    <p>A freeze dryer contains a freeze-drying chamber equipped with multiple shelves linked to heating elements, 
+        a freezing coil connected to a refrigerator compressor, and a vacuum pump. Upon sealing the chamber and initiating the procedure, 
+        the compressors activate to reduce the chambers temperature. The material solidifies as it freezes, 
+        thereby isolating the water from its surroundings at a molecular level, 
+        despite the waters continued presence. Subsequently, the machine activates the vacuum pump to expel air from the chamber, 
+        reducing the atmospheric pressure to below 0.06 atm. 
+        Meanwhile, the heating units gently apply heat to the shelves, prompting the ice to undergo a phase change. Given the low pressure, 
+        the ice transitions directly into water vapor. 
+        This vapor exits the freeze-drying chamber, passing over the freezing coil where it condenses into solid ice. 
+        This cycle persists for numerous hours, allowing the material to gradually dry. 
+        The extended duration of the process is essential as excessive heating can alter the materials composition and structure significantly. 
+        Moreover, hastening the sublimation process may generate more water vapor within a given timeframe than the pumping system can effectively remove from the chamber, 
+        potentially reintroducing moisture to the material and compromising its quality. 
+        If securely sealed, the material can remain shelf-stable for an extended period, 
+        retaining its integrity until rehydrated. Under ideal circumstances, the substance undergoes the entire process with minimal alteration.</p>
+  </div>
+  <br>
 
-            <!-- Previous & next buttons -->
-            <div class="container">
-              <a href="module1.html">
-              <div class="card_next_prev">
-                <p>Back to</p>
-                <h3>Module 1.1</h3>
-              </div>
-              </a>
-              <div class="container">
-                <a href="../quizzes/quiz1.html">
-                <div class="card_next_prev">
-                  <p>Next to</p>
-                  <h3>Quiz 1</h3>
-                </div>
-                </a>
-    </body>
+  <!--Question Container-->
+  <div class="container_question">
+    <div class="question">
+      <h1>Question 1:</h1>
+      <p>Why does the chemistry transition from a solid straight to a gas instead of becoming a liquid first?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" onclick=que_sel1(0)> Temperature is too low</label>
+        <br>
+        <label><input type="radio" name="q1" onclick=que_sel1(1)> Temperature is too high</label>
+        <br>
+        <label><input type="radio" name="q1" onclick=que_sel1(2)> Pressure is too low</label>
+        <br>
+        <label><input type="radio" name="q1" onclick=que_sel1(3)> Pressure is too high</label>
+        <br>
+        <br>
+        <button type="button" onclick="check_que1()">Check Answer</button>
+        <div id="que1_box">
+          <p id="que1_a" color="white"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!--Content Container-->
+  <div class="container_content">
+
+    <h3>Freeze Drying Phases:</h3>
+    <ol>
+      <p>1. Freeze</p>
+      <p>2. Primary Dry</p>
+      <p>3. Secondary Dry</p>
+    </ol>
+    <h3>Freeze</h3>
+    <p>Freeze drying is a process that removes water from a substance. 
+        The freeze dryer lowers the temperature, causing the water to form ice. 
+        When the water solidifies, it separates molecularly from the chemistry while remaining present in the pouch.</p>
+    <img src='../images/phases_freeze.png' style="width:80%">
+    
+    <h3>Primary Dry (sublimation)</h3>
+    <p>The next stage is primary dry, also known as sublimation, 
+        during which the pressure decreases significantly while slight heat is applied to the substance to facilitate the sublimation of water. 
+        The vacuum in the freeze dryer accelerates this sublimation process by removing the water vapor from the chamber. 
+        Furthermore, the freeze dryers cold condenser offers a platform for water vapor to attach and solidify back into ice, 
+        safeguarding the vacuum pump from water vapor. 
+        Roughly 95% of the moisture within the substance is eliminated during this phase. 
+        Primary drying progresses slowly so that the majority of water can be pulled from the substance.</p>
+    <img src="../images/phases_primary_dry.png" style="width:80%">
+      
+    <h3>Secondary Dry (adsorption)</h3>
+    <p>In the final phase, known as secondary drying or adsorption, 
+      the focus is on eliminating ionically-bound water molecules. 
+      By elevating the temperature beyond that of the primary drying phase, 
+      the bonds between the material and water molecules are disrupted. 
+      This ensures the retention of a porous structure in the freeze-dried materials. 
+      Typically, most substances can be dried to achieve a residual moisture content of 1-5%.</p>
+    <img src="../images/phases_secondary_dry.png" style="width:80%">
+  </div>
+  <br>
+
+  <!--Question Container-->
+  <div class="container_question">
+    <div class="question">
+      <h1>Question 2:</h1>
+      <p>What is the purpose of secondary dry?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" onclick=que_sel2(0)> To sublimate the water</label>
+        <br>
+        <label><input type="radio" name="q2" onclick=que_sel2(1)> To remove the ionically-bound water molecules</label>
+        <br>
+        <label><input type="radio" name="q2" onclick=que_sel2(2)> To evaporate the water</label>
+        <br>
+        <label><input type="radio" name="q2" onclick=que_sel2(3)> To melt the ice present in the pouch</label>
+        <br>
+        <br>
+        <button type="button" onclick="check_que2()">Check Answer</button>
+        <div id="que2_box">
+          <p id="que2_a" color="white"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!--Content Container-->
+  <div class="container_content">
+    <h2>Freeze Dryer Operation</h2>
+    <h3>Freeze Dryer Protocol</h3>
+    <p>During each phase of the freeze drying protocol, 
+    there are steps that the freeze dryer progresses through. Protocol steps can be thought of as the steps of any recipe. 
+    Each one is an important event that must occur for the water to be successfully removed from the chemistry. 
+    For each step, there's a duration and required temperature. The final freeze and drying phases also have a required pressure. 
+    For the protocol to progress through a step, 
+    the internal temperature and pressure must reach the listed value in that step. Additionally, 
+    the freeze dryer must remain in that step for the listed time.</p>
+    <h3>Loading Phase</h3>
+    <p>To start the freeze drying process, you will load the protocol on the freeze dryer.</p>
+    <div class="slideshow-container">
+      <div class="mySlides3">
+        <img src="../images/protocol_14_fd_arrow.png" style="width:80%">
+        <div class="text">1. Select the "FREEZE DRYING" tab</div>
+      </div>
+      <div class="mySlides3">
+        <img src="../images/protocol_14_existing_arrow.png" style="width:80%">
+        <div class="text">2. Select the "EXISTING" button</div>
+      </div>
+      <div class="mySlides3">
+        <img src="../images/protocol_14_download_arrow.png" style="width:80%">
+        <div class="text">3. Select "ASAY-SFW-0014" from the attached USB then select "Open"</div>
+      </div>
+      <div class="mySlides3">
+        <img src="../images/protocol_14_start_arrow.png" style="width:80%">
+        <div class="text">4. Select the start button</div>
+      </div>
+      <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+    </div>
+
+    <div class="dots" style="text-align:center">
+      <span class="dot3" onclick="currentSlide3(1)"></span>
+      <span class="dot3" onclick="currentSlide3(2)"></span>
+      <span class="dot3" onclick="currentSlide3(3)"></span>
+      <span class="dot3" onclick="currentSlide3(4)"></span>
+    </div>
+
+
+    <h3>Finish Loading</h3>
+    <p>When the freeze dryer has been fully loaded with product, you will select the green button 
+      labeled "Finished Loading". This ends the loading step and begins the remainder of the protocol. 
+      Make sure that each shelf in the freeze dryer is filled! Use empty racks to fill any unfilled shelves.</p>
+        
+    <div class="slideshow-container">
+      <div class="mySlides4">
+        <img src="../images/protocol_14_finished_loading_arrow.png" style="width:80%">
+        <div class="text">1. Select the "FINISHED LOADING" tab</div>
+      </div>
+      <div class="mySlides4">
+        <img src="../images/protocol_14_internal_pressure_arrow.png" style="width:80%">
+        <div class="text">2. The internal pressure must reduce below 400,000 mTorr</div>
+      </div>
+      <div class="mySlides4">
+        <img src="../images/protocol_14_pressure_trigger_arrow.png" style="width:80%">
+        <div class="text">3. Make sure the pressure difference trigger is disabled</div>
+      </div>
+      <div class="mySlides4">
+        <img src="../images/protocol_14_product_trigger_arrow.png" style="width:80%">
+        <div class="text">4. Make sure the product average trigger is diabled</div>
+      </div>
+      <div class="mySlides4">
+        <img src="../images/protocol_14_stoppering_arrow.png" style="width:80%">
+        <div class="text">5. Make sure stoppering is set to automatic</div>
+      </div>
+          <a class="prev" onclick="plusSlides4(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides4(1)">&#10095;</a>
+    </div>
+
+    <div class="dots" style="text-align:center">
+      <span class="dot4" onclick="currentSlide4(1)"></span>
+      <span class="dot4" onclick="currentSlide4(2)"></span>
+      <span class="dot4" onclick="currentSlide4(3)"></span>
+      <span class="dot4" onclick="currentSlide4(4)"></span>
+      <span class="dot4" onclick="currentSlide4(5)"></span>
+    </div>
+
+  
+
+
+    <h3>Freeze Phase</h3>
+    <p>The freeze phase consists of two steps followed by a final freeze. Step 1 starts out by dropping the temperature 
+      of the product to -60 C. Once that step has successfully completed, step 2 commences by holding the product at that 
+      temperature for 240 minutes. After 240 minutes have passed, final freeze happens, activating the vacuum and removing 
+      the internal pressure down to 500 mT.
+    </p>
+
+    <!--Slideshow-->
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="../images/protocol_14_freeze_arrow.png" style="width:80%">
+        <div class="text">Freeze Phase</div>
+      </div>
+      <div class="mySlides">
+        <img src="../images/protocol_14_metrics_arrow.png" style="width:80%">
+        <div class="text">SHELF SETPT or Temperature (C) & Time (minutes)</div>
+      </div>
+      <div class="mySlides">
+        <img src="../images/protocol_14_step_1_arrow.png" style="width:80%">
+        <div class="text">Freezing Phase Step 1</div>
+      </div>
+      <div class="mySlides">
+        <img src="../images/protocol_14_step_2_arrow.png" style="width:80%">
+        <div class="text">Freezing Phase Step 2</div>
+      </div>
+      <div class="mySlides">
+        <img src="../images/protocol_14_null_arrow.png" style="width:80%">
+        <div class="text">Freezing Phase Null Values (skipped)</div>
+      </div>
+      <div class="mySlides">
+        <img src="../images/protocol_14_final_arrow.png" style="width:80%">
+        <div class="text">Final Freeze</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="dots" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+    <h3>Primary & Secondary Dry Phases</h3>
+    <p>The drying phase gradually warms the product back up while simultaneously removing the air and water vapor inside the chamber. 
+      The freeze dryer increases the temperature to -40 C, then holds that temperature for 3 hours. 
+      The temperature is then increased to -25 C for 10.5 hours! 
+      The temperature is increased again bringing it up to 0 C for 1 hour, then 25 C for 2 hours.
+    </p>
+    <div class="slideshow-container">
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Phase</div>
+      </div>
+    
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_metrics_arrow.png" style="width:80%">
+        <div class="text">SHELF SETPT or Temperature (C), Time (minutes), & VACUUM SETPT or Pressure (mT)</div>
+      </div>
+    
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_step_1_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Step 1</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_step_2_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Step 2</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_step_3_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Step 3</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_step_4_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Step 4</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_step_5_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Step 5</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="../images/protocol_14_primary_dry_step_6_arrow.png" style="width:80%">
+        <div class="text">Primary Dry Step 6</div>
+      </div>
+
+      <div class="mySlides2">
+        <img src="../images/protocol_14_secondary_dry_arrow.png" style="width:80%">
+        <div class="text">Secondary Dry</div>
+      </div>   
+    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+    </div>
+
+    <div class="dots" style="text-align:center">
+      <span class="dot2" onclick="currentSlide2(1)"></span>
+      <span class="dot2" onclick="currentSlide2(2)"></span>
+      <span class="dot2" onclick="currentSlide2(3)"></span>
+      <span class="dot2" onclick="currentSlide2(4)"></span>
+      <span class="dot2" onclick="currentSlide2(5)"></span>
+      <span class="dot2" onclick="currentSlide2(6)"></span>
+      <span class="dot2" onclick="currentSlide2(7)"></span>
+      <span class="dot2" onclick="currentSlide2(8)"></span>
+      <span class="dot2" onclick="currentSlide2(9)"></span>
+    </div>
+  </div>
+  <br>
+
+  <!--Content Container-->
+  <div class="container_content">
+    <img src="../images/protocol_14_finished_loading_arrow.png" style="width:90%">
+  </div>
+  <br>
+  <div class="container_question">
+    <h2>Practice Problem 1:</h2>
+    <p>Referencing the image above, list the temperatures of the first four steps in the protocol.</p>
+    <select id="practice_pipette_select" onchange="q0_ps(this.value)">
+      <option value='*'>*</option>
+      <option value="4">0</option>
+      <option value="1">-25</option>
+      <option value="2">-40</option>
+      <option value="3">-55</option>
+      <option value="0">-60</option>
+    </select>
+    <br>
+    <br>
+    <select id="practice_q0_i0" onchange="dial0(this.value)">
+      <option value="*">*</option>
+      <option value="4">0</option>
+      <option value="1">-25</option>
+      <option value="2">-40</option>
+      <option value="3">-55</option>
+      <option value="0">-60</option>
+    </select>
+    <br>
+    <br>
+    <select id="practice_q0_i1" onchange="dial1(this.value)">
+      <option value="*">*</option>
+      <option value="0">0</option>
+      <option value="1">-25</option>
+      <option value="2">-40</option>
+      <option value="5">-55</option>
+      <option value="4">-60</option>
+    </select>
+    <br>
+    <br>
+    <select id="practice_q0_i2" onchange="dial2(this.value)">
+      <option value="*">*</option>
+      <option value="0">0</option>
+      <option value="1">-25</option>
+      <option value="4">-40</option>
+      <option value="3">-55</option>
+      <option value="2">-60</option>
+    </select>
+    <br>
+    <br>
+    <button type="button" onclick="check_answer0()">Check Answer</button>
+    <div id="q0_box">
+      <p id="q0_a" color="white"></p>
+    </div>
+  </div>
+  <br>
+    
+  <!--Question Container-->
+  <div class="container_question">
+    <h2>Practice Problem 2:</h2>
+    <p>Referencing the image above, list the current readings for the following measurements:</p>
+    <p>Shelf temperature:</p>
+    <select id="practice_pipette_select" onchange="q1_ps(this.value)">
+      <option value="*">*</option>
+      <option value='0'>4.6</option>
+      <option value="2">4.0</option>
+      <option value="1">4.1</option>
+      <option value="3">-82.0</option>
+    </select>
+    <br>
+    <br>
+    <p>Condenser Temperature:</p>
+    <select id="practice_q0_i0" onchange="dial3(this.value)">
+      <option value="*">*</option>
+      <option value="0">4.6</option>
+      <option value="3">4.0</option>
+      <option value="2">4.1</option>
+      <option value="1">-82.0</option>
+    </select>
+    <br>
+    <br>
+    <p>Internal Pressure:</p>
+    <select id="practice_q0_i1" onchange="dial4(this.value)">
+      <option value="*">*</option>
+      <option value="0">0</option>
+      <option value="5">637,610</option>
+      <option value="2">44</option>
+      <option value="3">4</option>
+    </select>
+    <br>
+    <br>
+    <p>Probe 1 Temperature:</p>
+    <select id="practice_q0_i2" onchange="dial5(this.value)">
+      <option value="*">*</option>
+      <option value="0">4.0</option>
+      <option value="1">3.7</option>
+      <option value="2">4.2</option>
+      <option value="4">4.9</option>
+    </select>
+    <br>
+    <br>
+    <button type="button" onclick="check_answer1()">Check Answer</button>
+    <div id="q1_box">
+      <p id="q1_a" color="white"></p>
+    </div>
+  </div>
+  <br>
+
+  <!--Question Container-->
+  <div class="container_question">
+    <h2>Practice Problem 3:</h2>
+    <p>Referencing the image above, what is the status for the following features:</p>
+    <p>Stoppering:</p>
+    <select id="practice_pipette_select" onchange="q2_ps(this.value)">
+      <option value="*">*</option>
+      <option value='2'>Automatic</option>
+      <option value="1">Manual</option>
+    </select>
+    <br>
+    <br>
+    <p>Product Average Trigger:</p>
+    <select id="practice_q0_i0" onchange="dial6(this.value)">
+      <option value="*">*</option>
+      <option value="1">Disabled</option>
+      <option value="0">Enabled</option>
+    </select>
+    <br>
+    <br>
+    <p>Pressure Difference Trigger:</p>
+    <select id="practice_q0_i1" onchange="dial7(this.value)">
+      <option value="*">*</option>
+      <option value="8">Disabled</option>
+      <option value="1">Enabled</option>
+    </select>
+    <br>
+    <br>
+    <p>Loading Set Point:</p>
+    <select id="practice_q0_i2" onchange="dial8(this.value)">
+      <option value="*">*</option>
+      <option value="0">Enabled</option>
+      <option value="1">Disabled</option>
+    </select>
+    <br>
+    <br>
+    <button type="button" onclick="check_answer2()">Check Answer</button>
+    <div id="q2_box">
+      <p id="q2_a" color="white"></p>
+    </div>
+  </div>
+  
+  <!-- Previous/Next Cards -->
+  <div class="container">
+    <a href="module1.html">
+      <div class="card_next_prev">
+        <p>Back to</p>
+        <h3>Module 1.1</h3>
+      </div>
+    </a>
+    <a href="../quizzes/quiz1.html">
+      <div class="card_next_prev">
+        <p>Next to</p>
+        <h3>Quiz 1</h3>
+      </div>
+    </a>
+  </body>
 </html>
+
+
 <script>
   var slideIndex = 1;
   showSlides(slideIndex);

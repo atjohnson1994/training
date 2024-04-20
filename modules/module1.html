@@ -1,181 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script type="text/javascript" src="../static/java.js"></script>
-        <link rel="stylesheet" type="text/css" href="../static/style.css">
-    </head>
-    <body>
-        <div id="home"> <!-- Add padding to the content -->
-            <div>
-              <div class="row">
-                <div >
-                  <!-- Title and description -->
-                  <div id="title">
-                    <h1 >Module 1: Trees & Freeze Dryers</h1>
-                  </div>
-                  <nav>
-                    <ul>
-                        <li><a href="../formulation.html">Home</a></li>
-                        <li><a href="modules.html">Modules</a></li>
-                        <li><a href="../quizzes/quizzes.html">Quizzes</a></li>
-                        <li><a href="#">Scores</a></li>
-                    </ul>
-                </nav>
-                <div class="container">
-                <a href="module1.html">
-                <div class="card">
-                  <h2>Part 1: Plunger Trees</h2>
-                </div>
-                </a>
-                <a href="module1_pt2.html">
-                <div class="card">
-                  <h2>Part 2: Freeze Dryers</h2>
-                </div>
-                </a>
-                <a href="#">
-                  <div class="card">
-                    <h2>Relevent WIDs</h2>
-                  </div>
-                  </a>
-                  <a href="#">
-                <div class="card">
-                  <h2>Relevent Batch Records</h2>
-                </div>
-                </a>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-                  <div class="container_content">
-                    <h2>Part 1: Plunger Trees</h2>
-                      <h3>Plunger Tree Purpose</h3>
-                       <p>Plunger Trees seal the contents of the wells once they have been freeze-dried. 
-                        When a freeze dryer completes its run, the shelves are lifted against one another. 
-                        This forces the plunger trees down into the pouches, sealing the contents of each well.</p>
-                        <img src="../images/plunged_arrow.jpg" style="width:70%">
+  <!--JavaScript-->
+  <script type="text/javascript" src="../static/java.js"></script>
 
-                  </div>
-                    <br>
-                    
-                </div>
-                <br>
-                <div class="container_content">
-                    <h2>Plunger Tree Operation</h2>
-                    <h3>Manual Insertion</h3>
-                    <p>The pouch has twelve wells and the plunger has twelve branches. 
-                      On the plunger tree, there is one branch that is shorter than the rest. 
-                      This branch is inserted into the furthest well to the right. 
-                      Begin by inserting one tree into the pouch, 
-                      make sure each well is covered and that the tree is resting parallel to the tray. 
-                      If the tree is sitting at an angle, 
-                      the tree was likely inserted incorrectly. 
-                      If for any reason, a tree branch is inserted into the wrong well, 
-                      place it in the scrap bin and grab a new plunger tree.
-                    </p>
-
-                    
-                    <h3>Automated Insertion</h3>
-                    <p>The FLA inserts the plunger trees into the pouches. 
-                      For the machine to function, 
-                      it's important to understand the light indicator system of the FLA. 
-                      There is an indicator mounted above each opening into the FLA. 
-                      They indicate to you whether or not it is an appropriate time 
-                      to reach into the machine. 
-                      Similar to a traffic stop light, green means go, red means stop, and yellow 
-                      means that a stop is soon approaching.
-                      Never reach into the FLA while a red light is present. 
-                      If it happens, the FLA will immediately stop whatever it's doing to protect the operator. 
-                      Yellow light will indicate that a stop is coming. If you notice a yellow light, 
-                      finish your task promptly and step away 
-                      from the machine. 
-                      A green light indicates that you are free to reach into that area of the machine. 
-                      The next step will be removing the tray from the FLA.
-                      While the indicator is flashing green, you may reach in and pull the tray towards you gently. 
-                      Upon bringing it out of the FLA, 
-                      lift the tray using both hands, 
-                      making sure to hold the outer bars on each side. 
-                      Use absolute care when handling trays with wet chemistry in them. 
-                      Locate the assigned freeze dryer for that tray, 
-                      use your hip to hold the bar of the tray closest to you, 
-                      then use your free hand to open the freeze dryer. 
-                      Slide the tray into the next avilable shelf. 
-                      Make sure to line it up in the middle of the shelf 
-                      and gently slide until the back of the tray is flush 
-                      against the two metal rods in the back of the chamber.
-                    </p>
-                    <img src="../images/traffic_lights.jpg" style="width:70%">
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
 
 
-                  </div>
-                  <br>
-                  <div class="container_question">
-                    <div class="question">
-                      <h1>Question 1:</h1>
-                      <p>Which end of the pouch does the shortest branch go in?</p>
-                      <div class="options">
-                        <label><input type="radio" name="q1" onclick=que_sel1(0)> Far left</label>
-                        <br>
-                        <label><input type="radio" name="q1" onclick=que_sel1(1)> Center</label>
-                        <br>
-                        <label><input type="radio" name="q1" onclick=que_sel1(2)> Far right</label>
-                        <br>
-                        <br>
-                        <button type="button" onclick="check_que1()">Check Answer</button>
-                        <div id="que1_box">
-                          <p id="que1_a" color="white"></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  <div class="container_question">
-                  <div class="question">
-                    <h1>Question 2:</h1>
-                    <p>At what times is it ok to reach inside of the FLA?</p>
-                    <div class="options">
-                      <label><input type="radio" name="q2" onclick=que_sel2(0)> Red Light</label>
-                      <br>
-                      <label><input type="radio" name="q2" onclick=que_sel2(1)> Green or Yellow Light</label>
-                      <br>
-                      <label><input type="radio" name="q2" onclick=que_sel2(2)> Green Light</label>
-                      <br>
-                      <label><input type="radio" name="q2" onclick=que_sel2(3)> Yellow Light</label>
-                      <br>
-                      <br>
-                      <button type="button" onclick="check_que2()">Check Answer</button>
-                      <div id="que2_box">
-                        <p id="que2_a" color="white"></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="container">
-                  <a href="modules.html">
-                  <div class="card_next_prev">
-                    <p>Back to</p>
-                    <h3>Modules</h3>
-                  </div>
-                  </a>
-                  <div class="container">
-                    <a href="module1_pt2.html">
-                    <div class="card_next_prev">
-                      <p>Next to</p>
-                      <h3>Module 1.2</h3>
-                    </div>
-                    </a>
+<body>
+  <!--Title-->
+  <div id="title">
+    <h1 >Module 1: Trees & Freeze Dryers</h1>
+  </div>
 
-                <br>
+  <!--Navigation Bar-->
+  <nav>
+    <ul>
+      <li><a href="../formulation.html">Home</a></li>
+      <li><a href="modules.html">Modules</a></li>
+      <li><a href="../quizzes/quizzes.html">Quizzes</a></li>
+      <li><a href="#">Scores</a></li>
+    </ul>
+  </nav>
 
-                  <br>
+  <!--Cards-->
+  <div class="container">
+    <a href="module1.html">
+      <div class="card">
+        <h2>Part 1: Plunger Trees</h2>
+      </div>
+    </a>
+    <a href="module1_pt2.html">
+      <div class="card">
+        <h2>Part 2: Freeze Dryers</h2>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <h2>Relevent WIDs</h2>
+      </div>
+    </a>
+    <a href="#">
+      <div class="card">
+        <h2>Relevent Batch Records</h2>
+      </div>
+    </a>
+  </div>
 
-                  <br>
+  <!--Content Container-->
+  <div class="container_content">
+    <h2>Part 1: Plunger Trees</h2>
+    <h3>Plunger Tree Purpose</h3>
+    <p>Plunger Trees seal the contents of the wells once they have been freeze-dried. 
+    When a freeze dryer completes its run, the shelves are lifted against one another. 
+    This forces the plunger trees down into the pouches, sealing the contents of each well.
+    </p>
+    <img src="../images/plunged_arrow.jpg" style="width:80%">
+  </div>
+  <br>
 
-                  <br>
+  <!--Content Container-->
+  <div class="container_content">
+    <h2>Plunger Tree Operation</h2>
+    <h3>Manual Insertion</h3>
+    <p>The pouch has twelve wells and the plunger has twelve branches. 
+      On the plunger tree, there is one branch that is shorter than the rest. 
+      This branch is inserted into the furthest well to the right. 
+      Begin by inserting one tree into the pouch, 
+      make sure each well is covered and that the tree is resting parallel to the tray. 
+      If the tree is sitting at an angle, 
+      the tree was likely inserted incorrectly. 
+      If for any reason, a tree branch is inserted into the wrong well, 
+      place it in the scrap bin and grab a new plunger tree.
+    </p>
+    <h3>Automated Insertion</h3>
+    <p>The FLA inserts the plunger trees into the pouches. 
+      For the machine to function, 
+      it's important to understand the light indicator system of the FLA. 
+      There is an indicator mounted above each opening into the FLA. 
+      They indicate to you whether or not it is an appropriate time 
+      to reach into the machine. 
+      Similar to a traffic stop light, green means go, red means stop, and yellow 
+      means that a stop is soon approaching.
+      Never reach into the FLA while a red light is present. 
+      If it happens, the FLA will immediately stop whatever it's doing to protect the operator. 
+      Yellow light will indicate that a stop is coming. If you notice a yellow light, 
+      finish your task promptly and step away 
+      from the machine. 
+      A green light indicates that you are free to reach into that area of the machine. 
+      The next step will be removing the tray from the FLA.
+      While the indicator is flashing green, you may reach in and pull the tray towards you gently. 
+      Upon bringing it out of the FLA, 
+      lift the tray using both hands, 
+      making sure to hold the outer bars on each side. 
+      Use absolute care when handling trays with wet chemistry in them. 
+      Locate the assigned freeze dryer for that tray, 
+      use your hip to hold the bar of the tray closest to you, 
+      then use your free hand to open the freeze dryer. 
+      Slide the tray into the next avilable shelf. 
+      Make sure to line it up in the middle of the shelf 
+      and gently slide until the back of the tray is flush 
+      against the two metal rods in the back of the chamber.
+    </p>
+    <img src="../images/traffic_lights.jpg" style="width:70%">
+  </div>
+  <br>
 
-                </div>
-              </div>
-            </div>
-    </body>
+  <!--Question Container-->
+  <div class="container_question">
+    <div class="question">
+      <h1>Question 1:</h1>
+      <p>Which end of the pouch does the shortest branch go in?</p>
+      <div class="options">
+        <label><input type="radio" name="q1" onclick=que_sel1(0)> Far left</label>
+        <br>
+        <label><input type="radio" name="q1" onclick=que_sel1(1)> Center</label>
+        <br>
+        <label><input type="radio" name="q1" onclick=que_sel1(2)> Far right</label>
+        <br>
+        <br>
+        <button type="button" onclick="check_que1()">Check Answer</button>
+        <div id="que1_box">
+          <p id="que1_a" color="white"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <!--Question Container-->
+  <div class="container_question">
+    <div class="question">
+      <h1>Question 2:</h1>
+      <p>At what times is it ok to reach inside of the FLA?</p>
+      <div class="options">
+        <label><input type="radio" name="q2" onclick=que_sel2(0)> Red Light</label>
+        <br>
+        <label><input type="radio" name="q2" onclick=que_sel2(1)> Green or Yellow Light</label>
+        <br>
+        <label><input type="radio" name="q2" onclick=que_sel2(2)> Green Light</label>
+        <br>
+        <label><input type="radio" name="q2" onclick=que_sel2(3)> Yellow Light</label>
+        <br>
+        <br>
+        <button type="button" onclick="check_que2()">Check Answer</button>
+        <div id="que2_box">
+          <p id="que2_a" color="white"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Previous/Next Cards-->
+  <div class="container">
+    <a href="modules.html">
+      <div class="card_next_prev">
+        <p>Back to</p>
+        <h3>Modules</h3>
+      </div>
+    </a>
+    <a href="module1_pt2.html">
+      <div class="card_next_prev">
+        <p>Next to</p>
+        <h3>Module 1.2</h3>
+      </div>
+    </a>
+  </div>
+
+</body>
 </html>
